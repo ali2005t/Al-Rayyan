@@ -303,6 +303,14 @@ const FAQ_DATA = [
 
 export default function Home() {
   const { t, i18n } = useTranslation();
+  
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'ar' ? 'en' : 'ar';
+    i18n.changeLanguage(newLang);
+    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = newLang;
+  };
+
   // Navigation & UI States
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -398,7 +406,7 @@ export default function Home() {
   const selectedMaterialObj = currentEstimatorData.materials[estimatorMaterialIndex] || currentEstimatorData.materials[0];
 
   return (
-    <div className="min-h-screen bg-[#091B44] text-white font-sans dir-rtl overflow-x-hidden selection:bg-[#C89B3C] selection:text-white" dir="rtl">
+    <div className={`min-h-screen bg-[#091B44] text-white font-sans overflow-x-hidden selection:bg-[#C89B3C] selection:text-white ${i18n.language === 'ar' ? 'dir-rtl' : 'dir-ltr'}`} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
 
       {/* Navbar Header */}
       <header
@@ -427,13 +435,13 @@ export default function Home() {
           {/* Desktop Links */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium">
             {[
-              { id: 'home', label: 'الرئيسية' },
-              { id: 'about', label: 'من نحن' },
-              { id: 'services', label: 'خدماتنا' },
-              { id: 'projects', label: 'أعمالنا' },
-              { id: 'factory', label: 'المصنع' },
-              { id: 'faq', label: 'الأسئلة' },
-              { id: 'contact', label: 'اتصل بنا' }
+              { id: 'home', label: t('home') },
+              { id: 'about', label: t('about') },
+              { id: 'services', label: t('services') },
+              { id: 'projects', label: t('projects') },
+              { id: 'factory', label: t('factory') },
+              { id: 'faq', label: t('faq') },
+              { id: 'contact', label: t('contact') }
             ].map((link) => (
               <a
                 key={link.id}
@@ -453,21 +461,33 @@ export default function Home() {
           {/* Header Action CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <button
+              onClick={toggleLanguage}
+              className="text-white hover:text-[#C89B3C] font-bold text-sm px-3 py-1 border border-white/20 rounded-full hover:bg-white/10 transition-all uppercase"
+            >
+              {i18n.language === 'ar' ? 'EN' : 'عربي'}
+            </button>
+            <button
               onClick={() => setInspectionModalOpen(true)}
               className="bg-gradient-to-r from-[#0A3EA8] to-[#1e58d4] hover:from-[#1e58d4] hover:to-[#0A3EA8] text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-white/20 flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-[#C89B3C] animate-spin" style={{ animationDuration: '4s' }} />
-              <span>اطلب معاينة مجانية</span>
+              <span>{i18n.language === 'ar' ? 'اطلب معاينة مجانية' : 'Free Inspection'}</span>
             </button>
           </div>
 
           {/* Mobile Menu Trigger */}
           <div className="flex md:hidden items-center gap-3">
             <button
+              onClick={toggleLanguage}
+              className="text-white text-xs font-bold px-2 py-2"
+            >
+              {i18n.language === 'ar' ? 'EN' : 'عربي'}
+            </button>
+            <button
               onClick={() => setInspectionModalOpen(true)}
               className="bg-[#0A3EA8] text-white text-xs font-bold px-3 py-2 rounded-lg"
             >
-              معاينة مجانية
+              {i18n.language === 'ar' ? 'معاينة مجانية' : 'Free Insp.'}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -484,13 +504,13 @@ export default function Home() {
           <div className="md:hidden bg-[#091B44]/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 transition-all">
             <div className="flex flex-col gap-4 text-base font-medium">
               {[
-                { id: 'home', label: 'الرئيسية' },
-                { id: 'about', label: 'من نحن' },
-                { id: 'services', label: 'خدماتنا' },
-                { id: 'projects', label: 'معرض الأعمال' },
-                { id: 'factory', label: 'المصنع والتكنولوجيا' },
-                { id: 'faq', label: 'الأسئلة الشائعة' },
-                { id: 'contact', label: 'تواصل معنا' }
+                { id: 'home', label: t('home') },
+                { id: 'about', label: t('about') },
+                { id: 'services', label: t('services') },
+                { id: 'projects', label: t('projects') },
+                { id: 'factory', label: t('factory') },
+                { id: 'faq', label: t('faq') },
+                { id: 'contact', label: t('contact') }
               ].map((link) => (
                 <a
                   key={link.id}
