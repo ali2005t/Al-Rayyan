@@ -18,6 +18,7 @@ import {
   Menu,
   MapPin,
   Mail,
+  ArrowDown,
   Clock,
   ArrowLeft,
   Play,
@@ -1335,9 +1336,9 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 items-start pb-12 pt-8 relative z-10">
               {[
-                "https://www.facebook.com/share/v/1CCwFAbs5N/",
+                "https://www.facebook.com/reel/1547958189986727",
                 "https://www.facebook.com/reel/923003916778208",
-                "https://www.facebook.com/reel/1773121107000371",
+                "https://www.facebook.com/reel/1506415967931385",
                 "https://www.facebook.com/reel/1716579213028179",
                 "LOGO",
                 "https://www.facebook.com/reel/2008169783155366",
@@ -1345,11 +1346,23 @@ export default function Home() {
               ].map((item, idx) => (
                 <div key={idx} className={`w-full flex justify-center transition-all duration-500 hover:-translate-y-2 ${idx % 3 === 1 ? 'lg:mt-16' : ''} ${idx % 2 === 1 ? 'md:mt-12 lg:mt-0' : ''} ${idx === 6 ? 'lg:col-start-2' : ''}`}>
                   {item === "LOGO" ? (
-                    <div className="w-[300px] h-[533px] flex flex-col items-center justify-center relative group hidden lg:flex">
-                      <div className="absolute inset-0 bg-[#C89B3C] rounded-full blur-[80px] opacity-20 animate-pulse" style={{ animationDuration: '3s' }}></div>
-                      <img src="/logo.jpg" alt="Al Rayan" className="w-56 h-56 object-cover rounded-full border-4 border-[#C89B3C] shadow-2xl relative z-10 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-12" />
-                      <div className="absolute bottom-[20%] text-[#C89B3C] font-bold text-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-full lg:w-[300px] h-[250px] lg:h-[533px] flex flex-col items-center justify-center relative group">
+                      <div className="absolute inset-0 bg-[#C89B3C] rounded-full blur-[60px] lg:blur-[80px] opacity-20 animate-pulse" style={{ animationDuration: '3s' }}></div>
+                      
+                      {/* Mobile Top Arrows */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center lg:hidden">
+                        <ArrowDown className="w-6 h-6 text-[#C89B3C] animate-bounce" />
+                      </div>
+
+                      <img src="/logo.jpg" alt="Al Rayan" className="w-40 h-40 lg:w-56 lg:h-56 object-cover rounded-full border-4 border-[#C89B3C] shadow-2xl relative z-10 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-12" />
+                      
+                      <div className="absolute bottom-4 lg:bottom-[20%] text-[#C89B3C] font-bold text-lg lg:text-xl whitespace-nowrap opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         إبداعات الريان
+                      </div>
+
+                      {/* Mobile Bottom Arrows */}
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center lg:hidden">
+                        <ArrowDown className="w-6 h-6 text-[#C89B3C] animate-bounce" />
                       </div>
                     </div>
                   ) : (
@@ -1375,7 +1388,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <a href="https://www.facebook.com/25rayan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] text-white py-4 px-8 rounded-2xl font-bold text-lg shadow-xl transition-transform hover:scale-105">
-              <span>تابع صفحتنا على فيسبوك لمزيد من الأعمال</span>
+              <span>تابع صفحتنا على فيسبوك لمشاهدة بقية الأعمال</span>
             </a>
           </div>
 
