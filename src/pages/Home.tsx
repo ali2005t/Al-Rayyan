@@ -799,27 +799,31 @@ export default function Home() {
 
               <div className="inline-flex items-center gap-2 bg-[#0A3EA8]/30 border border-[#0A3EA8] text-[#C89B3C] px-4 py-1.5 rounded-full text-xs font-bold w-fit">
                 <Building2 className="w-4 h-4" />
-                <span>عن الريان لأعمال المطابخ والدريسنج</span>
+                <span>{i18n.language === 'ar' ? 'عن الريان لأعمال المطابخ والدريسنج' : 'About Al-Rayyan Kitchens & Dressing'}</span>
               </div>
 
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight font-serif">
-                نحول رؤيتك إلى واقع معماري <br />
-                <span className="text-[#C89B3C]">يتسم بالأناقة والدقة المتناهية</span>
+                {i18n.language === 'ar' ? 'نحول رؤيتك إلى واقع معماري' : 'We turn your vision into architectural reality'} <br />
+                <span className="text-[#C89B3C]">{i18n.language === 'ar' ? 'يتسم بالأناقة والدقة المتناهية' : 'characterized by elegance & precision'}</span>
               </h2>
 
               <p className="text-gray-300 leading-relaxed text-base">
-                <strong className="text-white">الريان</strong> شركة متخصصة في تصميم وتنفيذ المطابخ والدريسنج بجميع المقاسات والخامات، مع فريق محترف يهتم بأدق التفاصيل لتقديم حلول عملية وعصرية تناسب كل منزل.
+                {i18n.language === 'ar' ? (
+                  <><strong className="text-white">الريان</strong> شركة متخصصة في تصميم وتنفيذ المطابخ والدريسنج بجميع المقاسات والخامات، مع فريق محترف يهتم بأدق التفاصيل لتقديم حلول عملية وعصرية تناسب كل منزل.</>
+                ) : (
+                  <><strong className="text-white">Al-Rayyan</strong> is specialized in designing and executing kitchens and dressing rooms of all sizes and materials, with a professional team that cares about the smallest details.</>
+                )}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2">
                 <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#C89B3C]/40 transition-colors">
-                  <h4 className="text-[#C89B3C] font-bold text-base mb-1">رؤيتنا</h4>
-                  <p className="text-xs text-gray-300">أن نكون العلامة التجارية الأولى والأكثر ثقة في صناعة المطابخ وأنظمة الألوميتال في مصر والشرق الأوسط.</p>
+                  <h4 className="text-[#C89B3C] font-bold text-base mb-1">{i18n.language === 'ar' ? 'رؤيتنا' : 'Our Vision'}</h4>
+                  <p className="text-xs text-gray-300">{i18n.language === 'ar' ? 'أن نكون العلامة التجارية الأولى والأكثر ثقة في صناعة المطابخ وأنظمة الألوميتال في مصر والشرق الأوسط.' : 'To be the first and most trusted brand in the kitchen and alumetal industry in Egypt and the Middle East.'}</p>
                 </div>
 
                 <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#C89B3C]/40 transition-colors">
-                  <h4 className="text-[#C89B3C] font-bold text-base mb-1">رسالتنا</h4>
-                  <p className="text-xs text-gray-300">تقديم منتجات هندسية عالية الجودة تضمن الراحة والأمان والجمال لعملائنا بأفضل الأسعار وبضمان حقيقي.</p>
+                  <h4 className="text-[#C89B3C] font-bold text-base mb-1">{i18n.language === 'ar' ? 'رسالتنا' : 'Our Mission'}</h4>
+                  <p className="text-xs text-gray-300">{i18n.language === 'ar' ? 'تقديم منتجات هندسية عالية الجودة تضمن الراحة والأمان والجمال لعملائنا بأفضل الأسعار وبضمان حقيقي.' : 'Providing high quality engineering products that ensure comfort, safety and beauty for our clients at the best prices.'}</p>
                 </div>
               </div>
 
@@ -862,12 +866,12 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">خدماتنا المتخصصة</span>
+            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'خدماتنا المتخصصة' : 'Our Specialized Services'}</span>
             <h2 className="text-3xl sm:text-5xl font-black text-white font-serif mb-4">
-              حلول متكاملة للمطابخ والدريسنج والألوميتال
+              {i18n.language === 'ar' ? 'حلول متكاملة للمطابخ والدريسنج والألوميتال' : 'Integrated Solutions for Kitchens, Dressing & Alumetal'}
             </h2>
             <p className="text-gray-300 text-base">
-              نصمم وننفذ أرقى المنتجات الهندسية والحلول المعمارية للمنازل، الفيلل، الشركات، والمشاريع التجارية بأعلى معايير الدقة.
+              {i18n.language === 'ar' ? 'نصمم وننفذ أرقى المنتجات الهندسية والحلول المعمارية للمنازل، الفيلل، الشركات، والمشاريع التجارية بأعلى معايير الدقة.' : 'We design and execute the finest engineering products and architectural solutions for homes, villas, companies, and commercial projects.'}
             </p>
           </motion.div>
 
@@ -925,7 +929,7 @@ export default function Home() {
                       onClick={() => setInspectionModalOpen(true)}
                       className="w-full bg-white/5 hover:bg-[#C89B3C] hover:text-white border border-white/10 text-gray-200 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2"
                     >
-                      <span>اطلب معاينة لهذه الخدمة</span>
+                      <span>{i18n.language === 'ar' ? 'اطلب معاينة لهذه الخدمة' : 'Request Inspection'}</span>
                       <ChevronLeft className="w-4 h-4" />
                     </button>
                   </div>
@@ -952,23 +956,23 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-5 flex flex-col gap-6"
             >
-              <span className="text-[#C89B3C] font-bold text-sm tracking-wider">التحول القبل وبعد</span>
+              <span className="text-[#C89B3C] font-bold text-sm tracking-wider">{i18n.language === 'ar' ? 'التحول القبل وبعد' : 'The Before & After'}</span>
               <h2 className="text-3xl sm:text-5xl font-black text-white font-serif leading-tight">
-                شاهد الفارق <br />
-                <span className="text-[#C89B3C]">قبل وبعد تنفيذ الريان</span>
+                {i18n.language === 'ar' ? 'شاهد الفارق' : 'See the Difference'} <br />
+                <span className="text-[#C89B3C]">{i18n.language === 'ar' ? 'قبل وبعد تنفيذ الريان' : 'Before & After Al-Rayyan'}</span>
               </h2>
               <p className="text-gray-300 text-base leading-relaxed">
-                نحيل المساحات العادية أو غير المستغلة إلى تحف معمارية فاخرة تجمع بين الأمان، العزل التام، والشكل المودرن الساحر. اسحب المؤشر للاطلاع على النتيجة الفعالية!
+                {i18n.language === 'ar' ? 'نحيل المساحات العادية إلى تحف معمارية فاخرة تجمع بين الأمان، العزل التام، والشكل المودرن الساحر. اسحب المؤشر لمشاهدة النتيجة!' : 'We transform ordinary spaces into luxury architectural masterpieces combining safety, full insulation, and modern design. Drag the slider to see the result!'}
               </p>
 
               <div className="space-y-4 pt-2">
                 <div className="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
                   <div className="w-3 h-3 rounded-full bg-[#C89B3C]" />
-                  <span className="text-sm font-semibold text-white">تحسين استغلال المساحة بنسبة 100%</span>
+                  <span className="text-sm font-semibold text-white">{i18n.language === 'ar' ? 'تحسين استغلال المساحة بنسبة 100%' : '100% Space Optimization'}</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
                   <div className="w-3 h-3 rounded-full bg-[#0A3EA8]" />
-                  <span className="text-sm font-semibold text-white">تشطيبات خالية من العيوب وضمان شامل</span>
+                  <span className="text-sm font-semibold text-white">{i18n.language === 'ar' ? 'تشطيبات خالية من العيوب وضمان شامل' : 'Flawless Finishing & Full Warranty'}</span>
                 </div>
               </div>
 
@@ -976,7 +980,7 @@ export default function Home() {
                 onClick={() => setInspectionModalOpen(true)}
                 className="w-fit bg-[#C89B3C] hover:bg-[#e07520] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-xl transition-all hover:scale-105"
               >
-                جدد مطبخك أو منزلك الآن
+                {i18n.language === 'ar' ? 'جدد مطبخك أو منزلك الآن' : 'Renovate Your Home Now'}
               </button>
             </motion.div>
 
@@ -995,7 +999,7 @@ export default function Home() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <span className="absolute top-4 left-4 bg-green-600/90 text-white font-bold text-xs px-3 py-1.5 rounded-full z-10 shadow-lg">
-                  بعد التنفيذ ✨
+                  {i18n.language === 'ar' ? 'بعد التنفيذ ✨' : 'After ✨'}
                 </span>
 
                 <div
@@ -1009,7 +1013,7 @@ export default function Home() {
                     style={{ width: '100%', height: '100%' }}
                   />
                   <span className="absolute top-4 right-4 bg-black/80 text-[#C89B3C] font-bold text-xs px-3 py-1.5 rounded-full z-10 shadow-lg">
-                    قبل التنفيذ 🛠️
+                    {i18n.language === 'ar' ? 'قبل التنفيذ 🛠️' : 'Before 🛠️'}
                   </span>
                 </div>
 
@@ -1033,7 +1037,7 @@ export default function Home() {
 
               </div>
               <p className="text-center text-xs text-gray-400 mt-3">
-                👈 اسحب مؤشر الصّورة يميناً ويساراً لملاحظة الفارق المعماري
+                {i18n.language === 'ar' ? '👈 اسحب مؤشر الصّورة يميناً ويساراً لملاحظة الفارق المعماري' : '👉 Drag the slider left or right to see the architectural difference'}
               </p>
             </motion.div>
 
@@ -1047,12 +1051,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">لماذا نعتبر الخيار الأول؟</span>
+            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'لماذا نعتبر الخيار الأول؟' : 'Why Are We The First Choice?'}</span>
             <h2 className="text-3xl sm:text-5xl font-black text-white font-serif mb-4">
-              مميزات تجعل شركة الريان خيارك الآمن
+              {i18n.language === 'ar' ? 'مميزات تجعل شركة الريان خيارك الآمن' : 'Features That Make Al-Rayyan Your Safe Choice'}
             </h2>
             <p className="text-gray-300 text-base">
-              نحن لا نقدم مجرد منتج، بل نقدم تجربة متكاملة تبدأ من المعاينة المجانية وحتى الضمان وخدمة ما بعد البيع.
+              {i18n.language === 'ar' ? 'نحن لا نقدم مجرد منتج، بل نقدم تجربة متكاملة تبدأ من المعاينة المجانية وحتى الضمان وخدمة ما بعد البيع.' : 'We do not just offer a product, but a complete experience from free inspection to warranty and after-sales service.'}
             </p>
           </div>
 
@@ -1060,33 +1064,39 @@ export default function Home() {
             {[
               {
                 icon: ShieldCheck,
-                title: 'خامات فائقة الجودة',
-                desc: 'نستخدم قطاعات ألوميتال معتمدة بسمك ثقيل وإكسسوارات إيطالية ونمساوية تدوم لعشرات السنين دون تغيير.'
+                title_ar: 'خامات فائقة الجودة', title_en: 'Superior Quality Materials',
+                desc_ar: 'نستخدم قطاعات ألوميتال معتمدة بسمك ثقيل وإكسسوارات إيطالية ونمساوية تدوم لعشرات السنين.',
+                desc_en: 'We use certified heavy-duty alumetal sections with Italian and Austrian accessories that last for decades.'
               },
               {
                 icon: Users,
-                title: 'مهندسون وفنيون متخصصون',
-                desc: 'طاقم هندسي مدرب على أعلى مستوى لإجراء الرفع المساحي بدقة والتصميم والتثبيت الخالي من الأخطاء.'
+                title_ar: 'مهندسون وفنيون متخصصون', title_en: 'Expert Engineers & Technicians',
+                desc_ar: 'طاقم هندسي مدرب على أعلى مستوى لإجراء الرفع المساحي بدقة والتصميم والتثبيت الخالي من الأخطاء.',
+                desc_en: 'A highly trained engineering team for precise surveying, design, and error-free installation.'
               },
               {
                 icon: Award,
-                title: 'ضمان حقيقي 10 سنوات',
-                desc: 'نمنح عملاءنا شهادة ضمان معتمدة وموثوقة على كافة المنتجات، مع التزام تام بالصيانة السريعة.'
+                title_ar: 'ضمان حقيقي 10 سنوات', title_en: 'Real 10-Year Warranty',
+                desc_ar: 'نمنح عملاءنا شهادة ضمان معتمدة على كافة المنتجات، مع التزام تام بالصيانة السريعة.',
+                desc_en: 'We provide clients with a certified warranty certificate on all products with full commitment to quick maintenance.'
               },
               {
                 icon: Clock,
-                title: 'سرعة في التسليم',
-                desc: 'نحترم وقت العميل بصرامة، ونلتزم بمواعيد التسليم المحددة بالعقد دون أي تأخير.'
+                title_ar: 'سرعة في التسليم', title_en: 'Fast Delivery',
+                desc_ar: 'نحترم وقت العميل بصرامة، ونلتزم بمواعيد التسليم المحددة بالعقد دون أي تأخير.',
+                desc_en: 'We respect the client’s time strictly and commit to the contract delivery dates with zero delays.'
               },
               {
                 icon: Factory,
-                title: 'أحدث المعدات والماكينات',
-                desc: 'نمتلك مصنعاً مجهزاً بأحدث ماكينات القص والتجميع وتقنيات التقطيع بالليزر لضمان زوايا دقيقة 100%.'
+                title_ar: 'أحدث المعدات والماكينات', title_en: 'Latest Machines & Equipment',
+                desc_ar: 'نمتلك مصنعاً مجهزاً بأحدث ماكينات القص والتجميع وتقنيات التقطيع بالليزر.',
+                desc_en: 'Our factory is equipped with the latest CNC cutting machines and laser precision technology for 100% accurate angles.'
               },
               {
                 icon: Sparkles,
-                title: 'أسعار منافسة وحلول مرنة',
-                desc: 'نقدم قيمة استثنائية مقابل السعر مع إمكانية توفير خيارات متعددة تناسب ميزانيتك ومتطلباتك.'
+                title_ar: 'أسعار منافسة وحلول مرنة', title_en: 'Competitive Prices & Flexible Solutions',
+                desc_ar: 'نقدم قيمة استثنائية مقابل السعر مع إمكانية توفير خيارات متعددة تناسب ميزانيتك.',
+                desc_en: 'We provide exceptional value for money with multiple options to suit your budget and requirements.'
               }
             ].map((feature, idx) => {
               const IconComp = feature.icon;
@@ -1098,8 +1108,8 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-2xl bg-[#0A3EA8]/30 border border-[#0A3EA8] text-[#C89B3C] flex items-center justify-center">
                     <IconComp className="w-7 h-7" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{feature.desc}</p>
+                  <h3 className="text-xl font-bold text-white">{i18n.language === 'ar' ? (feature as any).title_ar : (feature as any).title_en}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{i18n.language === 'ar' ? (feature as any).desc_ar : (feature as any).desc_en}</p>
                 </div>
               );
             })}
@@ -1122,7 +1132,7 @@ export default function Home() {
             >
               <div className="inline-flex items-center gap-2 bg-[#0A3EA8]/30 border border-[#0A3EA8] text-[#C89B3C] px-4 py-1.5 rounded-full text-xs font-bold w-fit">
                 <Factory className="w-4 h-4" />
-                <span>مصنع الريان للألوميتال</span>
+                <span>{i18n.language === 'ar' ? 'مصنع الريان للألوميتال' : 'Al-Rayyan Alumetal Factory'}</span>
               </div>
 
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight font-serif">
@@ -1140,7 +1150,7 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-full border-2 border-[#05102a] bg-[#0A3EA8] flex items-center justify-center text-white shadow-lg"><Wrench className="w-5 h-5" /></div>
                   <div className="w-12 h-12 rounded-full border-2 border-[#05102a] bg-[#C89B3C] flex items-center justify-center text-white font-bold text-xs shadow-lg">+50</div>
                 </div>
-                <span className="text-sm font-bold text-white">فني ومهندس لخدمتك</span>
+                <span className="text-sm font-bold text-white">{i18n.language === 'ar' ? 'فني ومهندس لخدمتك' : 'Technician & Engineer at your service'}</span>
               </div>
             </motion.div>
 
@@ -1160,8 +1170,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#05102a] via-[#05102a]/40 to-transparent opacity-90" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
                   <div>
-                    <h4 className="text-white font-bold text-lg">فريق مهندسي الريان</h4>
-                    <p className="text-[#C89B3C] text-sm font-semibold mt-1">نعمل يداً بيد لتحقيق حلمك</p>
+                    <h4 className="text-white font-bold text-lg">{i18n.language === 'ar' ? 'فريق مهندسي الريان' : 'Al-Rayyan Engineering Team'}</h4>
+                    <p className="text-[#C89B3C] text-sm font-semibold mt-1">{i18n.language === 'ar' ? 'نعمل يداً بيد لتحقيق حلمك' : 'Working hand in hand to achieve your dream'}</p>
                   </div>
                   <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-[#C89B3C] transition-colors">
                     <ZoomIn className="w-5 h-5 text-white" />
@@ -1184,9 +1194,9 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">معرض الأعمال</span>
+              <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'معرض الأعمال' : 'Projects Gallery'}</span>
               <h2 className="text-3xl sm:text-5xl font-black text-white font-serif">
-                مشاريع نفخر بتنفيذها
+                {i18n.language === 'ar' ? 'مشاريع نفخر بتنفيذها' : 'Projects We Are Proud Of'}
               </h2>
             </div>
 
@@ -1262,12 +1272,12 @@ export default function Home() {
 
                 <div className="p-6 pt-0">
                   <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-gray-400">
-                    <span>عام التنفيذ: {project.date}</span>
+                    <span>i18n.language === 'ar' ? 'عام التنفيذ: ' + project.date : 'Year: ' + project.date</span>
                     <button
                       onClick={() => setSelectedProject(project)}
                       className="text-[#C89B3C] font-bold hover:underline flex items-center gap-1"
                     >
-                      <span>تفاصيل المشروع</span>
+                      <span>{i18n.language === 'ar' ? 'تفاصيل المشروع' : 'Project Details'}</span>
                       <ChevronLeft className="w-3.5 h-3.5" />
                     </button>
                   </div>
@@ -1286,12 +1296,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
             <div className="lg:col-span-6 flex flex-col gap-6">
-              <span className="text-[#C89B3C] text-sm font-bold tracking-wider">مصنع الريان للتصنيع المتطور</span>
+              <span className="text-[#C89B3C] text-sm font-bold tracking-wider">{i18n.language === 'ar' ? 'مصنع الريان للتصنيع المتطور' : 'Al-Rayyan Advanced Manufacturing Factory'}</span>
               <h2 className="text-3xl sm:text-5xl font-black text-white font-serif leading-tight">
-                تقنيات حديثة ودقة تصنيع متناهية
+                {i18n.language === 'ar' ? 'تقنيات حديثة ودقة تصنيع متناهية' : 'Modern Technologies & Precise Manufacturing'}
               </h2>
               <p className="text-gray-300 text-base leading-relaxed">
-                يتميز مصنعنا بوجود أحدث خطوط الإنتاج وآلات التجميع والقص CNC والتقطيع بالليزر، لإخراج قطاعات ألوميتال ومطابخ بمواصفات قياسية زواياها محكمة وتفاصيلها فائقة الجودة.
+                {i18n.language === 'ar' ? 'يتميز مصنعنا بوجود أحدث خطوط الإنتاج وآلات التجميع والقص CNC والتقطيع بالليزر، لإخراج قطاعات ألوميتال ومطابخ بمواصفات قياسية.' : 'Our factory features the latest production lines, CNC assembly and cutting machines, and laser cutting technology for standard-spec alumetal sections.'}
               </p>
 
               <div className="grid grid-cols-2 gap-4">
@@ -1312,7 +1322,7 @@ export default function Home() {
                   className="bg-[#0A3EA8] hover:bg-[#1955d1] text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-xl flex items-center gap-3 hover:scale-105 transition-all"
                 >
                   <ZoomIn className="w-5 h-5 text-[#C89B3C]" />
-                  <span>تكبير الصورة</span>
+                  <span>{i18n.language === 'ar' ? 'تكبير الصورة' : 'Zoom Image'}</span>
                 </button>
               </div>
             </div>
@@ -1346,11 +1356,11 @@ export default function Home() {
 
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight font-serif mb-4">
-              أعمالنا على <span className="text-[#C89B3C]">أرض الواقع</span>
+              {i18n.language === 'ar' ? 'أعمالنا على' : 'Our Work'} <span className="text-[#C89B3C]">{i18n.language === 'ar' ? 'أرض الواقع' : 'On The Ground'}</span>
             </h2>
 
             <p className="text-gray-300 text-base">
-              شاهد تفاصيل التشطيبات المودرن ودقة التركيب من خلال هذه المقاطع السريعة من أعمالنا.
+              {i18n.language === 'ar' ? 'شاهد تفاصيل التشطيبات المودرن ودقة التركيب من خلال هذه المقاطع السريعة من أعمالنا.' : 'Watch modern finishing details and installation precision through these quick clips from our work.'}
             </p>
           </div>
 
@@ -1489,9 +1499,9 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center mb-16">
-            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">إجابات استفساراتكم</span>
+            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'إجابات استفساراتكم' : 'Answers To Your Questions'}</span>
             <h2 className="text-3xl sm:text-5xl font-black text-white font-serif mb-4">
-              الأسئلة الشائعة
+              {i18n.language === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
             </h2>
           </div>
 
@@ -1522,15 +1532,15 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-r from-[#0A3EA8] via-[#091B44] to-[#0A3EA8] relative overflow-hidden border-t border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10 flex flex-col items-center gap-6">
           <span className="bg-[#C89B3C] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
-            عرض خاص لفترة محدودة
+            {i18n.language === 'ar' ? 'عرض خاص لفترة محدودة' : 'Special Offer for Limited Time'}
           </span>
 
           <h2 className="text-3xl sm:text-5xl font-black text-white font-serif max-w-3xl leading-tight">
-            جاهز تبدأ مشروعك وتجدد مطبخك أو واجهة مبناك بأعلى جودة؟
+            {i18n.language === 'ar' ? 'جاهز تبدأ مشروعك وتجدد مطبخك أو واجهة مبناك بأعلى جودة؟' : 'Ready to start your project and renovate your kitchen or building facade with the highest quality?'}
           </h2>
 
           <p className="text-gray-200 text-base max-w-xl">
-            احصل على معاينة مجانية من مهندس متخصص واستلم تصميم 3D تفاعلي مجاناً دون أي التزام.
+            {i18n.language === 'ar' ? 'احصل على معاينة مجانية من مهندس متخصص واستلم تصميم 3D تفاعلي مجاناً دون أي التزام.' : 'Get a free inspection from a specialist engineer and receive a free interactive 3D design with no commitment.'}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
@@ -1538,7 +1548,7 @@ export default function Home() {
               onClick={() => setInspectionModalOpen(true)}
               className="bg-[#C89B3C] hover:bg-[#e07520] text-white px-8 py-4 rounded-xl font-bold text-base shadow-2xl transition-all hover:scale-105"
             >
-              اطلب معاينة مجانية الآن
+              {i18n.language === 'ar' ? 'اطلب معاينة مجانية الآن' : 'Book Free Inspection Now'}
             </button>
             <a
               href="https://wa.me/201102655589"
@@ -1547,7 +1557,7 @@ export default function Home() {
               className="bg-[#25D366] hover:bg-[#20b858] text-white px-8 py-4 rounded-xl font-bold text-base shadow-2xl transition-all flex items-center justify-center gap-2 hover:scale-105"
             >
               <MessageCircle className="w-5 h-5" />
-              <span>تواصل واتساب مباشرة</span>
+              <span>{i18n.language === 'ar' ? 'تواصل واتساب مباشرة' : 'Chat on WhatsApp'}</span>
             </a>
           </div>
         </div>
@@ -1563,12 +1573,12 @@ export default function Home() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">كيف نعمل؟</span>
+            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'كيف نعمل؟' : 'How Do We Work?'}</span>
             <h2 className="text-3xl sm:text-5xl font-black text-white font-serif mb-4">
-              خطوات تنفيذ مشروعك
+              {i18n.language === 'ar' ? 'خطوات تنفيذ مشروعك' : 'Steps to Execute Your Project'}
             </h2>
             <p className="text-gray-300 text-base">
-              رحلة سلسة واحترافية من أول اتصال حتى الاستلام النهائي لضمان أعلى مستويات الجودة والرضا.
+              {i18n.language === 'ar' ? 'رحلة سلسة واحترافية من أول اتصال حتى الاستلام النهائي لضمان أعلى مستويات الجودة والرضا.' : 'A smooth and professional journey from first contact to final handover to ensure the highest quality and satisfaction.'}
             </p>
           </div>
 
@@ -1577,12 +1587,12 @@ export default function Home() {
             <div className="hidden lg:block absolute top-12 left-12 right-12 h-1 bg-gradient-to-r from-transparent via-[#C89B3C]/30 to-transparent -z-10" />
 
             {[
-              { id: 1, title: 'الاستشارة', icon: <PhoneCall className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 2, title: 'المعاينة', icon: <Ruler className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 3, title: 'تصميم 3D', icon: <Monitor className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 4, title: 'التصنيع', icon: <Cog className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 5, title: 'التركيب', icon: <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 6, title: 'دعم ما بعد البيع', icon: <HeartHandshake className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
+              { id: 1, title_ar: 'الاستشارة', title_en: 'Consultation', icon: <PhoneCall className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
+              { id: 2, title_ar: 'المعاينة', title_en: 'Inspection', icon: <Ruler className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
+              { id: 3, title_ar: 'تصميم 3D', title_en: '3D Design', icon: <Monitor className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
+              { id: 4, title_ar: 'التصنيع', title_en: 'Manufacturing', icon: <Cog className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
+              { id: 5, title_ar: 'التركيب', title_en: 'Installation', icon: <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
+              { id: 6, title_ar: 'دعم ما بعد البيع', title_en: 'After-Sales Support', icon: <HeartHandshake className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
             ].map((step, idx) => (
               <motion.div
                 key={idx}
@@ -1598,7 +1608,7 @@ export default function Home() {
                     {step.id}
                   </div>
                 </div>
-                <h4 className="text-lg font-bold text-white group-hover:text-[#C89B3C] transition-colors">{step.title}</h4>
+                <h4 className="text-lg font-bold text-white group-hover:text-[#C89B3C] transition-colors">{i18n.language === 'ar' ? (step as any).title_ar : (step as any).title_en}</h4>
               </motion.div>
             ))}
           </div>
@@ -1613,12 +1623,12 @@ export default function Home() {
 
             <div className="lg:col-span-5 flex flex-col gap-8">
               <div>
-                <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">تواصل معنا</span>
+                <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'تواصل معنا' : 'Contact Us'}</span>
                 <h2 className="text-3xl sm:text-5xl font-black text-white font-serif mb-4">
-                  يسعدنا استقبال استفساراتكم
+                  {i18n.language === 'ar' ? 'يسعدنا استقبال استفساراتكم' : 'We Welcome Your Enquiries'}
                 </h2>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  فريقنا الهندسي والخدمي جاهز للرد على اتصالاتكم وتوفير كافة التفاصيل والمقايسات الفنية.
+                  {i18n.language === 'ar' ? 'فريقنا الهندسي والخدمي جاهز للرد على اتصالاتكم وتوفير كافة التفاصيل والمقايسات الفنية.' : 'Our engineering and service team is ready to answer your calls and provide all details and technical quotes.'}
                 </p>
               </div>
 
@@ -1631,7 +1641,7 @@ export default function Home() {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs text-gray-400 block">الهاتف الرئيسي المباشر</span>
+                    <span className="text-xs text-gray-400 block">{i18n.language === 'ar' ? 'الهاتف الرئيسي المباشر' : 'Main Direct Phone'}</span>
                     <span className="text-lg font-bold text-white font-mono" dir="ltr">01102655589</span>
                   </div>
                 </a>
@@ -1644,7 +1654,7 @@ export default function Home() {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs text-gray-400 block">خط الدعم والاستشارات</span>
+                    <span className="text-xs text-gray-400 block">{i18n.language === 'ar' ? 'خط الدعم والاستشارات' : 'Support & Consultation Line'}</span>
                     <span className="text-lg font-bold text-white font-mono" dir="ltr">+20 10 30043236</span>
                   </div>
                 </a>
@@ -1659,7 +1669,7 @@ export default function Home() {
                     <MessageCircle className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs text-gray-400 block">واتساب 24/7</span>
+                    <span className="text-xs text-gray-400 block">{i18n.language === 'ar' ? 'واتساب 24/7' : 'WhatsApp 24/7'}</span>
                     <span className="text-lg font-bold text-white font-mono" dir="ltr">01102655589</span>
                   </div>
                 </a>
@@ -1669,8 +1679,8 @@ export default function Home() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs text-gray-400 block">المصنع والإدارة</span>
-                    <span className="text-sm font-bold text-white">جمهورية مصر العربية - القاهرة الكبرى</span>
+                    <span className="text-xs text-gray-400 block">{i18n.language === 'ar' ? 'المصنع والإدارة' : 'Factory & Administration'}</span>
+                    <span className="text-sm font-bold text-white">{i18n.language === 'ar' ? 'جمهورية مصر العربية - القاهرة الكبرى' : 'Egypt - Greater Cairo'}</span>
                   </div>
                 </div>
 
@@ -1691,13 +1701,13 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-7 bg-[#08173b] p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
-              <h3 className="text-2xl font-bold text-white mb-6">أرسل لنا تفاصيل طلبك</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{i18n.language === 'ar' ? 'أرسل لنا تفاصيل طلبك' : 'Send Us Your Request Details'}</h3>
 
               {formSubmitted ? (
                 <div className="bg-green-500/20 border border-green-500 text-green-200 p-6 rounded-2xl text-center space-y-2 animate-fade-in">
                   <CheckCircle2 className="w-12 h-12 text-green-400 mx-auto" />
-                  <h4 className="text-xl font-bold">تم استلام طلبك بنجاح!</h4>
-                  <p className="text-sm">سيتواصل معك مهندس متخصص من فريق الريان خلال ساعات قليلة لتأكيد موعد المعاينة.</p>
+                  <h4 className="text-xl font-bold">{i18n.language === 'ar' ? 'تم استلام طلبك بنجاح!' : 'Your Request Was Received!'}</h4>
+                  <p className="text-sm">{i18n.language === 'ar' ? 'سيتواصل معك مهندس متخصص من فريق الريان خلال ساعات قليلة لتأكيد موعد المعاينة.' : 'A specialist engineer from Al-Rayyan team will contact you within a few hours to confirm the inspection appointment.'}</p>
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-5">
@@ -1715,7 +1725,7 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 mb-2">رقم الهاتف / الواتساب</label>
+                      <label className="block text-xs font-semibold text-gray-300 mb-2">{i18n.language === 'ar' ? 'رقم الهاتف / الواتساب' : 'Phone / WhatsApp'}</label>
                       <input
                         type="tel"
                         required
@@ -1773,7 +1783,7 @@ export default function Home() {
                     className="w-full bg-[#C89B3C] hover:bg-[#e07520] text-white py-4 rounded-xl font-bold text-base shadow-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.01]"
                   >
                     <Send className="w-5 h-5" />
-                    <span>تأكيد إرسال الطلب للمعاينة</span>
+                    <span>{i18n.language === 'ar' ? 'تأكيد إرسال الطلب للمعاينة' : 'Submit Inspection Request'}</span>
                   </button>
                 </form>
               )}
@@ -1807,7 +1817,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-sm mb-4">خدماتنا الرئيسية</h4>
+              <h4 className="text-white font-bold text-sm mb-4">{i18n.language === 'ar' ? 'خدماتنا الرئيسية' : 'Our Main Services'}</h4>
               <ul className="space-y-2 text-xs">
                 <li><a href="#services" className="hover:text-[#C89B3C] transition-colors">مطابخ أكريليك وبولي لاك</a></li>
                 <li><a href="#services" className="hover:text-[#C89B3C] transition-colors">غرف دريسنج روم فاخرة</a></li>
@@ -1818,7 +1828,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-sm mb-4">روابط سريعة</h4>
+              <h4 className="text-white font-bold text-sm mb-4">{i18n.language === 'ar' ? 'روابط سريعة' : 'Quick Links'}</h4>
               <ul className="space-y-2 text-xs">
                 <li><a href="#home" className="hover:text-[#C89B3C] transition-colors">الرئيسية</a></li>
                 <li><a href="#about" className="hover:text-[#C89B3C] transition-colors">من نحن</a></li>
@@ -1828,7 +1838,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-sm mb-4">أرقام التواصل والتواجد</h4>
+              <h4 className="text-white font-bold text-sm mb-4">{i18n.language === 'ar' ? 'أرقام التواصل والتواجد' : 'Contact Numbers'}</h4>
               <div className="space-y-3 text-xs">
                 <a href="https://wa.me/201102655589" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#C89B3C] transition-colors">
                   <MessageCircle className="w-4 h-4 text-[#25D366]" />
