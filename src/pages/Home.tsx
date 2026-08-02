@@ -1257,11 +1257,11 @@ export default function Home() {
 
               <div className="pt-2">
                 <button
-                  onClick={() => setVideoModalOpen(true)}
+                  onClick={() => setZoomedImage('/image_copy_7.png')}
                   className="bg-[#0A3EA8] hover:bg-[#1955d1] text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-xl flex items-center gap-3 hover:scale-105 transition-all"
                 >
-                  <Play className="w-5 h-5 fill-current text-[#C89B3C]" />
-                  <span>شاهد جولة داخل المصنع</span>
+                  <ZoomIn className="w-5 h-5 text-[#C89B3C]" />
+                  <span>تكبير الصورة</span>
                 </button>
               </div>
             </div>
@@ -1269,20 +1269,17 @@ export default function Home() {
             <div className="lg:col-span-6">
               <div
                 className="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer"
-                onClick={() => setVideoModalOpen(true)}
+                onClick={() => setZoomedImage('/image_copy_7.png')}
               >
                 <img
                   src="/image_copy_7.png"
-                  alt="ورش ومصنع الريان للألوميتال والمطابخ - خط الإنتاج"
+                  alt="أعمال الريان للألوميتال والمطابخ"
                   className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700 filter brightness-90 group-hover:brightness-105"
                 />
-                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex flex-col items-center justify-center gap-4">
-                  <div className="w-20 h-20 bg-[#C89B3C] text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
-                    <Play className="w-8 h-8 fill-current mr-1" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#05102a]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white">
+                    <ZoomIn className="w-6 h-6" />
                   </div>
-                  <span className="text-white font-bold text-base bg-black/60 px-4 py-2 rounded-full border border-white/20">
-                    تشغيل مقطع الفيديو HD
-                  </span>
                 </div>
               </div>
             </div>
@@ -1298,9 +1295,7 @@ export default function Home() {
 
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">أعمالنا على أرض الواقع</span>
-            <h2 className="text-3xl sm:text-5xl font-black text-white font-serif mb-4">
-              ريلز تفصيلية لمشاريع الريان
-            </h2>
+
             <p className="text-gray-300 text-base">
               شاهد تفاصيل التشطيبات المودرن ودقة التركيب من خلال هذه المقاطع السريعة من أعمالنا.
             </p>
