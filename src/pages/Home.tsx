@@ -1769,7 +1769,7 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-xl bg-white/5 p-1 flex items-center justify-center overflow-hidden">
                   <img src="/logo.jpg" alt="شعار الريان" className="w-full h-full object-contain" />
                 </div>
-                <span className="text-xl font-bold text-white font-serif">الريـــان</span>
+                <span className="text-xl font-bold text-white" style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}>الريان</span>
               </div>
               <p className="text-xs leading-relaxed text-gray-400">
                 الشركة الرائدة في تصنيع المطابخ المودرن، غرف الدريسنج، أنظمة الألوميتال، والواجهات الزجاجية بأرقى التصاميم وأقوى الضمانات في مصر.
@@ -1809,11 +1809,14 @@ export default function Home() {
                   <span dir="ltr" className="font-mono text-white text-sm font-bold">+20 10 30043236</span>
                 </a>
                 <div className="flex gap-4 pt-4">
-                  <a href="https://www.facebook.com/Alrayan.alometal" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#1877F2]/10 border border-[#1877F2] flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all">
-                    <Facebook className="w-5 h-5" />
+                  <a href="https://www.facebook.com/Alrayan.alometal" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:scale-110 transition-all shadow-lg shadow-[#1877F2]/30">
+                    <Facebook className="w-5 h-5 fill-current" />
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#E1306C]/10 border border-[#E1306C] flex items-center justify-center text-[#E1306C] hover:bg-[#E1306C] hover:text-white transition-all">
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white hover:scale-110 transition-all shadow-lg shadow-[#dc2743]/30">
                     <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href="https://wa.me/201102655589" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:scale-110 transition-all shadow-lg shadow-[#25D366]/30">
+                    <Phone className="w-5 h-5 fill-current" />
                   </a>
                 </div>
               </div>
