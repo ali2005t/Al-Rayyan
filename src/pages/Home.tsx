@@ -416,7 +416,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-black tracking-tight text-white leading-tight" style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}>
-                الريــــان
+                الريان
               </span>
               <span className="text-[10px] sm:text-xs text-[#C89B3C] font-semibold tracking-wider">
                 لأعمال المطابخ والدريسنج والألوميتال

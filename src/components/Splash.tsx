@@ -53,7 +53,7 @@ export default function Splash({ onComplete }: { onComplete: () => void }) {
               className="text-4xl font-black tracking-tight text-white leading-tight"
               style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}
             >
-              الريــــان
+              الريان
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
