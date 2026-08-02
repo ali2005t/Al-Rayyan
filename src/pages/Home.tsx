@@ -402,8 +402,8 @@ export default function Home() {
       {/* Navbar Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-            ? 'bg-[#091B44]/90 backdrop-blur-md shadow-2xl py-3 border-b border-white/10'
-            : 'bg-gradient-to-b from-[#091B44]/90 via-[#091B44]/50 to-transparent py-5'
+          ? 'bg-[#091B44]/90 backdrop-blur-md shadow-2xl py-3 border-b border-white/10'
+          : 'bg-gradient-to-b from-[#091B44]/90 via-[#091B44]/50 to-transparent py-5'
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -634,7 +634,7 @@ export default function Home() {
                 {/* Movement Lines - Outer Spinning Border */}
                 <div className="absolute -inset-5 rounded-full border-[6px] border-dashed border-[#C89B3C]/50 animate-[spin_20s_linear_infinite]" />
                 <div className="absolute -inset-10 rounded-full border-[2px] border-dashed border-white/20 animate-[spin_30s_linear_infinite_reverse]" />
-                
+
                 {/* Glowing Background Glow */}
                 <div className="absolute inset-0 rounded-full bg-[#C89B3C] blur-[80px] opacity-30 animate-pulse" />
 
@@ -655,7 +655,7 @@ export default function Home() {
                 <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-[#091B44] border-2 border-[#C89B3C] text-white px-8 py-3 rounded-2xl shadow-2xl z-20 flex flex-col items-center gap-1 w-max hover:scale-105 transition-transform duration-300">
                   <div className="flex items-center gap-2">
                     <User className="w-4 h-4 text-[#C89B3C]" />
-                    <span className="font-bold text-base">المهندس / شريف محمد</span>
+                    <span className="font-bold text-base">المهندس / شريف نادي</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Award className="w-3 h-3 text-gray-300" />
@@ -702,7 +702,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -738,7 +738,7 @@ export default function Home() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#0A3EA8]/30 rounded-full filter blur-3xl -z-0" />
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -894,7 +894,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -929,7 +929,7 @@ export default function Home() {
               </button>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -1061,8 +1061,8 @@ export default function Home() {
       <section className="py-24 bg-[#05102a] relative overflow-hidden border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -1073,27 +1073,27 @@ export default function Home() {
                 <Factory className="w-4 h-4" />
                 <span>مصنع الريان للألوميتال</span>
               </div>
-              
+
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight font-serif">
                 تقنيات حديثة <br />
                 <span className="text-[#C89B3C]">ودقة تصنيع متناهية</span>
               </h2>
-              
+
               <p className="text-gray-300 leading-relaxed text-base">
                 وراء كل مطبخ وغرفة دريسنج نصممها، فريق ضخم من الكفاءات الهندسية والفنية المجهزة بأحدث معدات القص والتجميع بالكمبيوتر. نحن نؤمن أن جودة التفاصيل الصغيرة هي ما تصنع الفخامة التي تدوم لسنوات.
               </p>
-              
+
               <div className="flex items-center gap-4 mt-4">
                 <div className="flex -space-x-4 -space-x-reverse">
-                  <div className="w-12 h-12 rounded-full border-2 border-[#05102a] bg-[#091B44] flex items-center justify-center text-white shadow-lg"><Users className="w-5 h-5"/></div>
-                  <div className="w-12 h-12 rounded-full border-2 border-[#05102a] bg-[#0A3EA8] flex items-center justify-center text-white shadow-lg"><Wrench className="w-5 h-5"/></div>
+                  <div className="w-12 h-12 rounded-full border-2 border-[#05102a] bg-[#091B44] flex items-center justify-center text-white shadow-lg"><Users className="w-5 h-5" /></div>
+                  <div className="w-12 h-12 rounded-full border-2 border-[#05102a] bg-[#0A3EA8] flex items-center justify-center text-white shadow-lg"><Wrench className="w-5 h-5" /></div>
                   <div className="w-12 h-12 rounded-full border-2 border-[#05102a] bg-[#C89B3C] flex items-center justify-center text-white font-bold text-xs shadow-lg">+50</div>
                 </div>
                 <span className="text-sm font-bold text-white">فني ومهندس لخدمتك</span>
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -1101,9 +1101,9 @@ export default function Home() {
               className="relative"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(200,155,60,0.15)] border border-white/10 group cursor-pointer" onClick={() => setZoomedImage('/person.png')}>
-                <img 
-                  src="/person.png" 
-                  alt="فريق عمل الريان والمهندسين" 
+                <img
+                  src="/person.png"
+                  alt="فريق عمل الريان والمهندسين"
                   className="w-full h-[400px] sm:h-[500px] object-cover filter brightness-90 group-hover:brightness-110 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#05102a] via-[#05102a]/40 to-transparent opacity-90" />
@@ -1117,7 +1117,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Decorative Elements */}
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#C89B3C]/20 rounded-full filter blur-[40px] -z-10" />
               <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-[#0A3EA8]/30 rounded-full filter blur-[50px] -z-10" />
@@ -1151,8 +1151,8 @@ export default function Home() {
                   key={btn.id}
                   onClick={() => setActiveProjectFilter(btn.id)}
                   className={`px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all ${activeProjectFilter === btn.id
-                      ? 'bg-[#C89B3C] text-white shadow-lg shadow-[#C89B3C]/30'
-                      : 'bg-white/5 text-gray-300 hover:bg-white/10'
+                    ? 'bg-[#C89B3C] text-white shadow-lg shadow-[#C89B3C]/30'
+                    : 'bg-white/5 text-gray-300 hover:bg-white/10'
                     }`}
                 >
                   {btn.label}
@@ -1495,7 +1495,7 @@ export default function Home() {
 
       {/* Work Process Section */}
       <section className="py-24 bg-[#05102a] relative overflow-hidden border-b border-white/5">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -1524,8 +1524,8 @@ export default function Home() {
               { id: 5, title: 'التركيب', icon: <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
               { id: 6, title: 'دعم ما بعد البيع', icon: <HeartHandshake className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
             ].map((step, idx) => (
-              <motion.div 
-                key={idx} 
+              <motion.div
+                key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -1616,13 +1616,13 @@ export default function Home() {
 
                 {/* Google Map */}
                 <div className="w-full h-48 rounded-2xl overflow-hidden border border-white/10 mt-2">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.60389552702!2d31.25846435!3d30.05948845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen={true} 
-                    loading="lazy" 
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.60389552702!2d31.25846435!3d30.05948845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
