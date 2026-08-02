@@ -52,16 +52,22 @@ import { useTranslation } from 'react-i18next';
 
 const HERO_SLIDES = [
   {
-    title: 'مطابخ مودرن وفخمة',
-    subtitle: 'تصاميم ألوميتال وأكريليك تحاكي أرقى المعايير الأوروبية'
+    title_ar: 'مطابخ مودرن وفخمة',
+    title_en: 'Modern & Luxury Kitchens',
+    subtitle_ar: 'تصاميم ألوميتال وأكريليك تحاكي أرقى المعايير الأوروبية',
+    subtitle_en: 'Alumetal and Acrylic designs mimicking European standards'
   },
   {
-    title: 'غرف الدريسنج روم الحصرية',
-    subtitle: 'استغلال ذكي للمساحات مع إضاءات مخفية وقواطع زجاجية'
+    title_ar: 'غرف الدريسنج روم الحصرية',
+    title_en: 'Exclusive Dressing Rooms',
+    subtitle_ar: 'استغلال ذكي للمساحات مع إضاءات مخفية وقواطع زجاجية',
+    subtitle_en: 'Smart space utilization with hidden lights & glass partitions'
   },
   {
-    title: 'واجهات الكرتن وول والسبايدر',
-    subtitle: 'حلول معمارية هجينة للمباني والمحلات التجارية الراقية'
+    title_ar: 'واجهات الكرتن وول والسبايدر',
+    title_en: 'Curtain Wall & Spider Facades',
+    subtitle_ar: 'حلول معمارية هجينة للمباني والمحلات التجارية الراقية',
+    subtitle_en: 'Hybrid architectural solutions for premium buildings'
   }
 ];
 
@@ -580,9 +586,9 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight font-serif tracking-normal"
               >
-                الريان لأعمال <br />
+                {i18n.language === 'ar' ? 'الريان لأعمال' : 'Al-Rayyan for'} <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C89B3C] via-[#ffaa64] to-white">
-                  المطابخ والدريسنج
+                  {i18n.language === 'ar' ? 'المطابخ والدريسنج' : 'Kitchens & Dressing Rooms'}
                 </span>
               </motion.h1>
 
@@ -592,7 +598,11 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-gray-200 text-lg sm:text-xl max-w-2xl leading-relaxed font-light transition-all duration-500"
               >
-                نصمم وننفذ مطبخ أحلامك بأعلى جودة وتشطيبات احترافية تناسب جميع المساحات والأذواق. متخصصون في <strong className="text-white font-semibold">المطابخ المودرن</strong>، و<strong className="text-white font-semibold">غرف الدريسنج</strong>.
+                {i18n.language === 'ar' ? (
+                  <>نصمم وننفذ مطبخ أحلامك بأعلى جودة وتشطيبات احترافية تناسب جميع المساحات والأذواق. متخصصون في <strong className="text-white font-semibold">المطابخ المودرن</strong>، و<strong className="text-white font-semibold">غرف الدريسنج</strong>.</>
+                ) : (
+                  <>We design and execute your dream kitchen with the highest quality and professional finishes. Specialists in <strong className="text-white font-semibold">Modern Kitchens</strong> and <strong className="text-white font-semibold">Dressing Rooms</strong>.</>
+                )}
               </motion.p>
 
               {/* Action Buttons */}
@@ -601,8 +611,8 @@ export default function Home() {
                   href="#projects"
                   className="w-full sm:w-auto bg-[#C89B3C] hover:bg-[#e07520] text-white px-8 py-4 rounded-xl font-bold text-base shadow-2xl hover:shadow-[#C89B3C]/30 transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-1 hover:scale-105"
                 >
-                  <span>استكشف معرض أعمالنا</span>
-                  <ArrowLeft className="w-5 h-5" />
+                  <span>{i18n.language === 'ar' ? 'استكشف معرض أعمالنا' : 'Explore Our Gallery'}</span>
+                  <ArrowLeft className={`w-5 h-5 ${i18n.language === 'en' ? 'rotate-180' : ''}`} />
                 </a>
 
                 <button
@@ -610,7 +620,7 @@ export default function Home() {
                   className="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105"
                 >
                   <PhoneCall className="w-5 h-5 text-[#C89B3C]" />
-                  <span>احجز معاينة مجانية الآن</span>
+                  <span>{i18n.language === 'ar' ? 'احجز معاينة مجانية الآن' : 'Book a Free Inspection Now'}</span>
                 </button>
               </div>
 
@@ -629,14 +639,14 @@ export default function Home() {
               {/* Key Badges */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10">
                 {[
-                  { label: 'مطابخ مودرن', sub: 'أكريليك وبولي لاك' },
-                  { label: 'دريسنج روم', sub: 'تصاميم زجاجية' },
-                  { label: 'أنظمة ألوميتال', sub: 'جامبو وتانجو' },
-                  { label: 'واجهات زجاج', sub: 'سيكوريت وكرتن وول' }
+                  { label_ar: 'مطابخ مودرن', label_en: 'Modern Kitchens', sub_ar: 'أكريليك وبولي لاك', sub_en: 'Acrylic & PolyLac' },
+                  { label_ar: 'دريسنج روم', label_en: 'Dressing Rooms', sub_ar: 'تصاميم زجاجية', sub_en: 'Glass Designs' },
+                  { label_ar: 'أنظمة ألوميتال', label_en: 'Alumetal Systems', sub_ar: 'جامبو وتانجو', sub_en: 'Jumbo & Tango' },
+                  { label_ar: 'واجهات زجاج', label_en: 'Glass Facades', sub_ar: 'سيكوريت وكرتن وول', sub_en: 'Curtain Wall' }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-3 text-center sm:text-right backdrop-blur-sm hover:border-[#C89B3C]/50 transition-colors">
-                    <div className="text-white font-bold text-sm">{item.label}</div>
-                    <div className="text-[#C89B3C] text-xs font-light">{item.sub}</div>
+                    <div className="text-white font-bold text-sm">{i18n.language === 'ar' ? item.label_ar : item.label_en}</div>
+                    <div className="text-[#C89B3C] text-xs font-light">{i18n.language === 'ar' ? item.sub_ar : item.sub_en}</div>
                   </div>
                 ))}
               </div>
@@ -676,11 +686,11 @@ export default function Home() {
                 <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-[#091B44] border-2 border-[#C89B3C] text-white px-8 py-3 rounded-2xl shadow-2xl z-20 flex flex-col items-center gap-1 w-max hover:scale-105 transition-transform duration-300">
                   <div className="flex items-center gap-2">
                     <User className="w-4 h-4 text-[#C89B3C]" />
-                    <span className="font-bold text-base">المهندس / شريف نادي</span>
+                    <span className="font-bold text-base">{i18n.language === 'ar' ? 'المهندس / شريف نادي' : 'Eng. Sherif Nadi'}</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Award className="w-3 h-3 text-gray-300" />
-                    <span className="text-xs text-gray-300 font-semibold">صاحب شركة الريان</span>
+                    <span className="text-xs text-gray-300 font-semibold">{i18n.language === 'ar' ? 'صاحب شركة الريان' : 'Founder of Al-Rayyan'}</span>
                   </div>
                 </div>
 
