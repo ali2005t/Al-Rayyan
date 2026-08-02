@@ -50,7 +50,8 @@ export default function Splash({ onComplete }: { onComplete: () => void }) {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="text-4xl font-black tracking-tight text-white leading-tight font-serif"
+              className="text-4xl font-black tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}
             >
               الريــــان
             </motion.h1>

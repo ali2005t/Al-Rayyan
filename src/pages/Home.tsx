@@ -415,7 +415,7 @@ export default function Home() {
               <img src="/logo.jpg" alt="شعار الريان" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-white leading-tight font-serif">
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-white leading-tight" style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}>
                 الريــــان
               </span>
               <span className="text-[10px] sm:text-xs text-[#C89B3C] font-semibold tracking-wider">
@@ -1348,14 +1348,14 @@ export default function Home() {
                   {item === "LOGO" ? (
                     <div className="w-full lg:w-[300px] h-[250px] lg:h-[533px] flex flex-col items-center justify-center relative group">
                       <div className="absolute inset-0 bg-[#C89B3C] rounded-full blur-[60px] lg:blur-[80px] opacity-20 animate-pulse" style={{ animationDuration: '3s' }}></div>
-                      
+
                       {/* Mobile Top Arrows */}
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center lg:hidden">
                         <ArrowDown className="w-6 h-6 text-[#C89B3C] animate-bounce" />
                       </div>
 
                       <img src="/logo.jpg" alt="Al Rayan" className="w-40 h-40 lg:w-56 lg:h-56 object-cover rounded-full border-4 border-[#C89B3C] shadow-2xl relative z-10 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-12" />
-                      
+
                       <div className="absolute bottom-4 lg:bottom-[20%] text-[#C89B3C] font-bold text-lg lg:text-xl whitespace-nowrap opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         إبداعات الريان
                       </div>
