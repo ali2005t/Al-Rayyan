@@ -309,12 +309,20 @@ const FAQ_DATA = [
 
 export default function Home() {
   const { t, i18n } = useTranslation();
+  const [isTranslating, setIsTranslating] = useState(false);
   
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'ar' ? 'en' : 'ar';
-    i18n.changeLanguage(newLang);
-    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = newLang;
+    setIsTranslating(true);
+    setTimeout(() => {
+      const newLang = i18n.language === 'ar' ? 'en' : 'ar';
+      i18n.changeLanguage(newLang);
+      document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.lang = newLang;
+    }, 600);
+    
+    setTimeout(() => {
+      setIsTranslating(false);
+    }, 1500);
   };
 
   // Navigation & UI States
@@ -414,6 +422,18 @@ export default function Home() {
   return (
     <div className={`min-h-screen bg-[#091B44] text-white font-sans overflow-x-hidden selection:bg-[#C89B3C] selection:text-white ${i18n.language === 'ar' ? 'dir-rtl' : 'dir-ltr'}`} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
 
+      {/* Wave Transition Overlay */}
+      <div 
+        className="fixed inset-[-100%] z-[100] pointer-events-none transition-transform duration-[1200ms] ease-in-out flex flex-col justify-center items-center bg-gradient-to-r from-[#C89B3C] via-[#0A3EA8] to-[#091B44]"
+        style={{ 
+          transform: isTranslating ? 'translateX(0) rotate(-5deg)' : `translateX(${i18n.language === 'ar' ? '150%' : '-150%'}) rotate(-5deg)`
+        }}
+      >
+         <div className="text-white text-4xl sm:text-6xl font-bold animate-pulse tracking-wider shadow-2xl" style={{ transform: 'rotate(5deg)' }}>
+            {i18n.language === 'ar' ? 'Switching Language...' : 'جاري تبديل اللغة...'}
+         </div>
+      </div>
+
       {/* Navbar Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
@@ -430,10 +450,10 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-black tracking-tight text-white leading-tight" style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}>
-                الريان
+                {i18n.language === 'ar' ? 'الريان' : 'Al-Rayyan'}
               </span>
               <span className="text-[10px] sm:text-xs text-[#C89B3C] font-semibold tracking-wider">
-                لأعمال المطابخ والدريسنج والألوميتال
+                {i18n.language === 'ar' ? 'لأعمال المطابخ والدريسنج والألوميتال' : 'For Kitchens, Dressing & Alumetal'}
               </span>
             </div>
           </a>
