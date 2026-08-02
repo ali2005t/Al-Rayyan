@@ -1294,7 +1294,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">أعمالنا على أرض الواقع</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight font-serif mb-4">
+              أعمالنا على <span className="text-[#C89B3C]">أرض الواقع</span>
+            </h2>
 
             <p className="text-gray-300 text-base">
               شاهد تفاصيل التشطيبات المودرن ودقة التركيب من خلال هذه المقاطع السريعة من أعمالنا.
