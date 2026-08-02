@@ -74,84 +74,102 @@ const HERO_SLIDES = [
 const SERVICES_DATA = [
   {
     id: 'kitchens',
-    title: 'مطابخ مودرن وفخمة',
-    subtitle: 'تصاميم مطابخ حديثة',
+    title: 'مطابخ مودرن وفخمة', title_en: 'Modern & Luxury Kitchens',
+    subtitle: 'تصاميم مطابخ حديثة', subtitle_en: 'Modern Kitchen Designs',
     desc: 'تصميم وتنفيذ أحدث المطابخ بأجود خامات الألوميتال، الخشب الألومنيوم (خشمونيوم)، والبولي لاك والأكريليك مع حلول استغلال المساحات والتخزين الذكي.',
+    desc_en: 'Design and execution of the latest kitchens using Alumetal, Khashmonium, PolyLac and Acrylic with smart storage solutions.',
     icon: HomeIcon,
     image: '/image_copy.png',
-    features: ['مقاومة تامة للمياه والحرارة والحشرات', 'مفصلات وآليات إغلاق صامت تدوم طويلاً', 'تصاميم 3D تفاعلية مخصصة لكل مساحة']
+    features: ['مقاومة تامة للمياه والحرارة والحشرات', 'مفصلات وآليات إغلاق صامت تدوم طويلاً', 'تصاميم 3D تفاعلية مخصصة لكل مساحة'],
+    features_en: ['Full resistance to water, heat & insects', 'Silent-close hinges lasting for years', 'Custom 3D interactive designs']
   },
   {
     id: 'polylac-kitchens',
-    title: 'مطابخ بولي لاك (PolyLac)',
-    subtitle: 'لمعان دائم وفخامة',
+    title: 'مطابخ بولي لاك (PolyLac)', title_en: 'PolyLac Kitchens',
+    subtitle: 'لمعان دائم وفخامة', subtitle_en: 'Lasting Gloss & Luxury',
     desc: 'مطابخ بولي لاك بتصميمات عصرية جذابة تتميز باللمعان العالي ومقاومة الخدوش والحرارة لتناسب الاستخدام اليومي المكثف.',
+    desc_en: 'PolyLac kitchens with high-gloss, scratch and heat resistance designs for intensive daily use.',
     icon: Sparkles,
     image: '/image_copy_2.png',
-    features: ['أعلى درجة لمعان (Mirror Effect)', 'مقاومة تامة للخدش والحرارة والمياه', 'ألوان ثابتة لا تتأثر بمرور الزمن']
+    features: ['أعلى درجة لمعان (Mirror Effect)', 'مقاومة تامة للخدش والحرارة والمياه', 'ألوان ثابتة لا تتأثر بمرور الزمن'],
+    features_en: ['Highest gloss level (Mirror Effect)', 'Full scratch, heat & water resistance', 'Permanent colors unaffected by time']
   },
   {
     id: 'khashmonium-kitchens',
-    title: 'مطابخ خشمونيوم',
-    subtitle: 'أصالة الخشب وقوة الألومنيوم',
+    title: 'مطابخ خشمونيوم', title_en: 'Khashmonium Kitchens',
+    subtitle: 'أصالة الخشب وقوة الألومنيوم', subtitle_en: 'Wood Look, Aluminum Strength',
     desc: 'نجمع لك بين الشكل الكلاسيكي الدافئ للخشب الطبيعي والمتانة العالية للألومنيوم المقاوم للماء والحشرات بلمسات عصرية.',
+    desc_en: 'We combine warm classic wood aesthetics with high-durability waterproof and pest-resistant aluminum.',
     icon: Layers,
     image: '/image_copy_3.png',
-    features: ['مظهر خشبي طبيعي وجذاب', 'مقاوم 100% للمياه والصدأ', 'عمر افتراضي طويل بدون صيانة']
+    features: ['مظهر خشبي طبيعي وجذاب', 'مقاوم 100% للمياه والصدأ', 'عمر افتراضي طويل بدون صيانة'],
+    features_en: ['Natural attractive wood appearance', '100% resistant to water and rust', 'Long lifespan with zero maintenance']
   },
   {
     id: 'acrylic-kitchens',
-    title: 'مطابخ أكريليك',
-    subtitle: 'تصاميم تركية وعالمية',
+    title: 'مطابخ أكريليك', title_en: 'Acrylic Kitchens',
+    subtitle: 'تصاميم تركية وعالمية', subtitle_en: 'Turkish & International Designs',
     desc: 'مطابخ أكريليك حديثة مصممة بأجود الخامات لتوفير مساحة عمل مريحة وألوان متناسقة تضفي بهجة وفخامة لمنزلك.',
+    desc_en: 'Modern acrylic kitchens with finest materials for a comfortable workspace and harmonious colors adding luxury to your home.',
     icon: ShieldCheck,
     image: '/image_copy_4.png',
-    features: ['خامات أكريليك أوروبية صديقة للبيئة', 'إكسسوارات ومفصلات سوفت كلوز (Soft Close)', 'توزيع ذكي للأجهزة المدمجة (Built-in)']
+    features: ['خامات أكريليك أوروبية صديقة للبيئة', 'إكسسوارات ومفصلات سوفت كلوز (Soft Close)', 'توزيع ذكي للأجهزة المدمجة (Built-in)'],
+    features_en: ['Eco-friendly European acrylic materials', 'Soft-close accessories and hinges', 'Smart layout for built-in appliances']
   },
   {
     id: 'curtain-walls',
-    title: 'واجهات الكرتن وول',
-    subtitle: 'أنظمة واجهات معمارية',
+    title: 'واجهات الكرتن وول', title_en: 'Curtain Wall Facades',
+    subtitle: 'أنظمة واجهات معمارية', subtitle_en: 'Architectural Facade Systems',
     desc: 'واجهات زجاجية للمباني الإدارية والشركات والمباني السكنية الراقية، توفر إضاءة طبيعية وتصميم معماري عالمي.',
+    desc_en: 'Glass facades for administrative buildings, companies and upscale residences providing natural lighting and global architectural design.',
     icon: Building2,
     image: '/image_copy_4.png',
-    features: ['أنظمة هيكلية وواجهات مستمرة Structural Glazing', 'تحمل عالي للرياح والضغط العالي', 'مظهر معماري استثنائي للمشاريع الكبرى']
+    features: ['أنظمة هيكلية وواجهات مستمرة Structural Glazing', 'تحمل عالي للرياح والضغط العالي', 'مظهر معماري استثنائي للمشاريع الكبرى'],
+    features_en: ['Structural Glazing systems', 'High resistance to wind and pressure', 'Exceptional look for large-scale projects']
   },
   {
     id: 'glass-facades',
-    title: 'الواجهات الزجاجية والسبايدر',
-    subtitle: 'واجهات سيكوريت بانورامية',
+    title: 'الواجهات الزجاجية والسبايدر', title_en: 'Glass & Spider Facades',
+    subtitle: 'واجهات سيكوريت بانورامية', subtitle_en: 'Panoramic Securit Facades',
     desc: 'تركيب واجهات زجاجية سيكوريت معتمدة للمحلات والمولات والمباني التجارية بأحدث أنظمة التثبيت والسبايدر.',
+    desc_en: 'Certified Securit glass facades for shops, malls and commercial buildings with the latest spider fixing systems.',
     icon: Maximize2,
     image: '/image_copy_4.png',
-    features: ['زجاج سيكوريت معالج حرارياً ضد الصدمات', 'إكسسوارات ستانلس ستيل 316 مقاوم للصدأ', 'رؤية بانورامية خالية من العوائق']
+    features: ['زجاج سيكوريت معالج حرارياً ضد الصدمات', 'إكسسوارات ستانلس ستيل 316 مقاوم للصدأ', 'رؤية بانورامية خالية من العوائق'],
+    features_en: ['Heat-treated shock-resistant Securit glass', 'Stainless Steel 316 rust-proof accessories', 'Unobstructed panoramic view']
   },
   {
     id: 'office-partitions',
-    title: 'قواطع المكاتب الزجاجية',
-    subtitle: 'Office Glass Partitions',
+    title: 'قواطع المكاتب الزجاجية', title_en: 'Office Glass Partitions',
+    subtitle: 'قواطع زجاجية احترافية', subtitle_en: 'Professional Glass Partitions',
     desc: 'تقسيم المساحات الإدارية بطرق ذكية تمنح خصوصية وشفافية في العمل مع عزل صوتي متطور للمكاتب وغرف الاجتماعات.',
+    desc_en: 'Smart office space division with privacy, transparency and advanced soundproofing for offices and meeting rooms.',
     icon: SlidersHorizontal,
     image: '/image_copy_5.png',
-    features: ['أنظمة زجاجية بدون فواصل رأسمية Frame-less', 'دمج ستائر داخلية أو زجاج متغبر ذكي', 'عزل صوتي لمساحات العمل الهدوء']
+    features: ['أنظمة زجاجية بدون فواصل رأسمية Frame-less', 'دمج ستائر داخلية أو زجاج متغبر ذكي', 'عزل صوتي لمساحات العمل الهدوء'],
+    features_en: ['Frame-less glass systems', 'Internal blinds or smart frosted glass', 'Soundproofing for quiet workspaces']
   },
   {
     id: 'cladding',
-    title: 'تجليد واجهات كلادينج',
-    subtitle: 'Aluminum Cladding Work',
+    title: 'تجليد واجهات كلادينج', title_en: 'Aluminum Cladding',
+    subtitle: 'تكسية واجهات احترافية', subtitle_en: 'Professional Facade Cladding',
     desc: 'تكسية واجهات المباني والمحلات بألواح الكلادينج المقاومة للحريق بألوان متنوعة وضمان طويل الأمد.',
+    desc_en: 'Covering building and shop facades with fire-resistant cladding panels in various colors with a long-term warranty.',
     icon: Award,
     image: '/image_copy_2.png',
-    features: ['ألواح مقاومة للحريق والحرارة UV', 'تنوع هائل في الألوان والتشطيبات', 'سهولة الصيانة والتنظيف المباشر']
+    features: ['ألواح مقاومة للحريق والحرارة UV', 'تنوع هائل في الألوان والتشطيبات', 'سهولة الصيانة والتنظيف المباشر'],
+    features_en: ['Fire and UV heat resistant panels', 'Huge variety of colors and finishes', 'Easy maintenance and direct cleaning']
   },
   {
     id: 'metal-fab',
-    title: 'تصنيع أعمال ألومنيوم مخصصة',
-    subtitle: 'Custom Aluminum Fabrication',
+    title: 'تصنيع أعمال ألومنيوم مخصصة', title_en: 'Custom Aluminum Fabrication',
+    subtitle: 'تصنيع مخصص حسب الطلب', subtitle_en: 'Made-to-Order Manufacturing',
     desc: 'حلول وتصاميم هندسية خاصة وفق مخططات الاستشاريين للمشاريع الفاخرة والفنادق والمقرات التجارية.',
+    desc_en: 'Special engineering solutions per consultant drawings for luxury projects, hotels and commercial headquarters.',
     icon: Wrench,
     image: '/image_copy_3.png',
-    features: ['تنفيذ دقيق حسب المواصفات الفنية', 'إنتاج بآلات CNC ألمانية متطورة', 'إشراف مهندسين متخصصين في الموقع']
+    features: ['تنفيذ دقيق حسب المواصفات الفنية', 'إنتاج بآلات CNC ألمانية متطورة', 'إشراف مهندسين متخصصين في الموقع'],
+    features_en: ['Precise execution per technical specs', 'Advanced German CNC machine production', 'On-site specialist engineer supervision']
   }
 ];
 
@@ -833,8 +851,8 @@ export default function Home() {
                     ✓
                   </div>
                   <div>
-                    <h5 className="font-bold text-white text-sm">مهندسون وفنيون محترفون</h5>
-                    <p className="text-xs text-gray-400">إشراف دقيق على كل خطوة تصنيع</p>
+                    <h5 className="font-bold text-white text-sm">{i18n.language === 'ar' ? 'مهندسون وفنيون محترفون' : 'Expert Engineers & Technicians'}</h5>
+                    <p className="text-xs text-gray-400">{i18n.language === 'ar' ? 'إشراف دقيق على كل خطوة تصنيع' : 'Precise oversight on every step'}</p>
                   </div>
                 </div>
 
@@ -843,8 +861,8 @@ export default function Home() {
                     ✓
                   </div>
                   <div>
-                    <h5 className="font-bold text-white text-sm">أفضل القطاعات والإكسسوارات</h5>
-                    <p className="text-xs text-gray-400">قطاعات ألومنيوم ثقيلة وزجاج معالج</p>
+                    <h5 className="font-bold text-white text-sm">{i18n.language === 'ar' ? 'أفضل القطاعات والإكسسوارات' : 'Best Sections & Accessories'}</h5>
+                    <p className="text-xs text-gray-400">{i18n.language === 'ar' ? 'قطاعات ألومنيوم ثقيلة وزجاج معالج' : 'Heavy aluminum sections & treated glass'}</p>
                   </div>
                 </div>
               </div>
@@ -905,16 +923,16 @@ export default function Home() {
                     </div>
 
                     <div className="p-6 flex flex-col gap-3">
-                      <span className="text-xs font-semibold text-[#C89B3C]">{service.subtitle}</span>
+                      <span className="text-xs font-semibold text-[#C89B3C]">{i18n.language === 'ar' ? service.subtitle : (service as any).subtitle_en}</span>
                       <h3 className="text-xl font-bold text-white group-hover:text-[#C89B3C] transition-colors">
-                        {service.title}
+                        {i18n.language === 'ar' ? service.title : (service as any).title_en}
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed">
-                        {service.desc}
+                        {i18n.language === 'ar' ? service.desc : (service as any).desc_en}
                       </p>
 
                       <div className="pt-3 border-t border-white/5 space-y-2">
-                        {service.features.map((feat, idx) => (
+                        {(i18n.language === 'ar' ? service.features : (service as any).features_en).map((feat: string, idx: number) => (
                           <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
                             <Check className="w-3.5 h-3.5 text-[#C89B3C]" />
                             <span>{feat}</span>
@@ -1272,7 +1290,7 @@ export default function Home() {
 
                 <div className="p-6 pt-0">
                   <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-gray-400">
-                    <span>i18n.language === 'ar' ? 'عام التنفيذ: ' + project.date : 'Year: ' + project.date</span>
+                    <span>{i18n.language === 'ar' ? 'عام التنفيذ: ' + project.date : 'Year: ' + project.date}</span>
                     <button
                       onClick={() => setSelectedProject(project)}
                       className="text-[#C89B3C] font-bold hover:underline flex items-center gap-1"
@@ -1306,13 +1324,13 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#091B44] p-4 rounded-2xl border border-white/10">
-                  <h4 className="text-white font-bold text-lg mb-1">ماكينات CNC ألمانية</h4>
-                  <p className="text-xs text-gray-400">دقة قص تصل إلى أجزاء من المليمتر</p>
+                  <h4 className="text-white font-bold text-lg mb-1">{i18n.language === 'ar' ? 'ماكينات CNC ألمانية' : 'German CNC Machines'}</h4>
+                  <p className="text-xs text-gray-400">{i18n.language === 'ar' ? 'دقة قص تصل إلى أجزاء من المليمتر' : 'Cutting precision down to fractions of a mm'}</p>
                 </div>
 
                 <div className="bg-[#091B44] p-4 rounded-2xl border border-white/10">
-                  <h4 className="text-white font-bold text-lg mb-1">دهانات إلكتروستاتيك</h4>
-                  <p className="text-xs text-gray-400">ثبات ألوان دائم ضد الخدش والصدأ</p>
+                  <h4 className="text-white font-bold text-lg mb-1">{i18n.language === 'ar' ? 'دهانات إلكتروستاتيك' : 'Electrostatic Coatings'}</h4>
+                  <p className="text-xs text-gray-400">{i18n.language === 'ar' ? 'ثبات ألوان دائم ضد الخدش والصدأ' : 'Permanent color stability against scratches & rust'}</p>
                 </div>
               </div>
 
@@ -1460,7 +1478,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">ثقة العملاء هي رأس مالنا</span>
+            <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'ثقة العملاء هي رأس مالنا' : 'Client Trust Is Our Capital'}</span>
             <h2 className="text-3xl sm:text-5xl font-black text-white font-serif mb-4">
               ماذا يقول عملاؤنا عن الريان؟
             </h2>
@@ -1812,7 +1830,7 @@ export default function Home() {
                 <span className="text-xl font-bold text-white" style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}>الريان</span>
               </div>
               <p className="text-xs leading-relaxed text-gray-400">
-                الشركة الرائدة في تصنيع المطابخ المودرن، غرف الدريسنج، أنظمة الألوميتال، والواجهات الزجاجية بأرقى التصاميم وأقوى الضمانات في مصر.
+                {i18n.language === 'ar' ? 'الشركة الرائدة في تصنيع المطابخ المودرن، غرف الدريسنج، أنظمة الألوميتال، والواجهات الزجاجية بأرقى التصاميم وأقوى الضمانات في مصر.' : 'The leading company in modern kitchens, dressing rooms, alumetal systems, and glass facades with the finest designs and strongest warranties in Egypt.'}
               </p>
             </div>
 
