@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import {
   Phone,
   MessageCircle,
   Facebook,
-  Instagram,
   CheckCircle2,
   Award,
   ShieldCheck,
@@ -49,6 +48,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { FaWhatsapp, FaTiktok } from 'react-icons/fa';
 
 const HERO_SLIDES = [
   {
@@ -79,7 +79,7 @@ const SERVICES_DATA = [
     desc: 'تصميم وتنفيذ أحدث المطابخ بأجود خامات الألوميتال، الخشب الألومنيوم (خشمونيوم)، والبولي لاك والأكريليك مع حلول استغلال المساحات والتخزين الذكي.',
     desc_en: 'Design and execution of the latest kitchens using Alumetal, Khashmonium, PolyLac and Acrylic with smart storage solutions.',
     icon: HomeIcon,
-    image: '/image_copy.png',
+    image: '/صورة_الريان_1.png',
     features: ['مقاومة تامة للمياه والحرارة والحشرات', 'مفصلات وآليات إغلاق صامت تدوم طويلاً', 'تصاميم 3D تفاعلية مخصصة لكل مساحة'],
     features_en: ['Full resistance to water, heat & insects', 'Silent-close hinges lasting for years', 'Custom 3D interactive designs']
   },
@@ -90,18 +90,18 @@ const SERVICES_DATA = [
     desc: 'مطابخ بولي لاك بتصميمات عصرية جذابة تتميز باللمعان العالي ومقاومة الخدوش والحرارة لتناسب الاستخدام اليومي المكثف.',
     desc_en: 'PolyLac kitchens with high-gloss, scratch and heat resistance designs for intensive daily use.',
     icon: Sparkles,
-    image: '/image_copy_2.png',
+    image: '/صورة_الريان_2.png',
     features: ['أعلى درجة لمعان (Mirror Effect)', 'مقاومة تامة للخدش والحرارة والمياه', 'ألوان ثابتة لا تتأثر بمرور الزمن'],
     features_en: ['Highest gloss level (Mirror Effect)', 'Full scratch, heat & water resistance', 'Permanent colors unaffected by time']
   },
   {
     id: 'khashmonium-kitchens',
-    title: 'مطابخ خشمونيوم', title_en: 'Khashmonium Kitchens',
+    title: 'مطابخ الألومنيوم', title_en: 'Khashmonium Kitchens',
     subtitle: 'أصالة الخشب وقوة الألومنيوم', subtitle_en: 'Wood Look, Aluminum Strength',
     desc: 'نجمع لك بين الشكل الكلاسيكي الدافئ للخشب الطبيعي والمتانة العالية للألومنيوم المقاوم للماء والحشرات بلمسات عصرية.',
     desc_en: 'We combine warm classic wood aesthetics with high-durability waterproof and pest-resistant aluminum.',
     icon: Layers,
-    image: '/image_copy_3.png',
+    image: '/صورة_الريان_3.png',
     features: ['مظهر خشبي طبيعي وجذاب', 'مقاوم 100% للمياه والصدأ', 'عمر افتراضي طويل بدون صيانة'],
     features_en: ['Natural attractive wood appearance', '100% resistant to water and rust', 'Long lifespan with zero maintenance']
   },
@@ -112,7 +112,7 @@ const SERVICES_DATA = [
     desc: 'مطابخ أكريليك حديثة مصممة بأجود الخامات لتوفير مساحة عمل مريحة وألوان متناسقة تضفي بهجة وفخامة لمنزلك.',
     desc_en: 'Modern acrylic kitchens with finest materials for a comfortable workspace and harmonious colors adding luxury to your home.',
     icon: ShieldCheck,
-    image: '/image_copy_4.png',
+    image: '/صورة_الريان_4.png',
     features: ['خامات أكريليك أوروبية صديقة للبيئة', 'إكسسوارات ومفصلات سوفت كلوز (Soft Close)', 'توزيع ذكي للأجهزة المدمجة (Built-in)'],
     features_en: ['Eco-friendly European acrylic materials', 'Soft-close accessories and hinges', 'Smart layout for built-in appliances']
   },
@@ -123,7 +123,7 @@ const SERVICES_DATA = [
     desc: 'واجهات زجاجية للمباني الإدارية والشركات والمباني السكنية الراقية، توفر إضاءة طبيعية وتصميم معماري عالمي.',
     desc_en: 'Glass facades for administrative buildings, companies and upscale residences providing natural lighting and global architectural design.',
     icon: Building2,
-    image: '/image_copy_4.png',
+    image: '/صورة_الريان_4.png',
     features: ['أنظمة هيكلية وواجهات مستمرة Structural Glazing', 'تحمل عالي للرياح والضغط العالي', 'مظهر معماري استثنائي للمشاريع الكبرى'],
     features_en: ['Structural Glazing systems', 'High resistance to wind and pressure', 'Exceptional look for large-scale projects']
   },
@@ -134,7 +134,7 @@ const SERVICES_DATA = [
     desc: 'تركيب واجهات زجاجية سيكوريت معتمدة للمحلات والمولات والمباني التجارية بأحدث أنظمة التثبيت والسبايدر.',
     desc_en: 'Certified Securit glass facades for shops, malls and commercial buildings with the latest spider fixing systems.',
     icon: Maximize2,
-    image: '/image_copy_4.png',
+    image: '/صورة_الريان_4.png',
     features: ['زجاج سيكوريت معالج حرارياً ضد الصدمات', 'إكسسوارات ستانلس ستيل 316 مقاوم للصدأ', 'رؤية بانورامية خالية من العوائق'],
     features_en: ['Heat-treated shock-resistant Securit glass', 'Stainless Steel 316 rust-proof accessories', 'Unobstructed panoramic view']
   },
@@ -145,7 +145,7 @@ const SERVICES_DATA = [
     desc: 'تقسيم المساحات الإدارية بطرق ذكية تمنح خصوصية وشفافية في العمل مع عزل صوتي متطور للمكاتب وغرف الاجتماعات.',
     desc_en: 'Smart office space division with privacy, transparency and advanced soundproofing for offices and meeting rooms.',
     icon: SlidersHorizontal,
-    image: '/image_copy_5.png',
+    image: '/صورة_الريان_5.png',
     features: ['أنظمة زجاجية بدون فواصل رأسمية Frame-less', 'دمج ستائر داخلية أو زجاج متغبر ذكي', 'عزل صوتي لمساحات العمل الهدوء'],
     features_en: ['Frame-less glass systems', 'Internal blinds or smart frosted glass', 'Soundproofing for quiet workspaces']
   },
@@ -156,7 +156,7 @@ const SERVICES_DATA = [
     desc: 'تكسية واجهات المباني والمحلات بألواح الكلادينج المقاومة للحريق بألوان متنوعة وضمان طويل الأمد.',
     desc_en: 'Covering building and shop facades with fire-resistant cladding panels in various colors with a long-term warranty.',
     icon: Award,
-    image: '/image_copy_2.png',
+    image: '/صورة_الريان_2.png',
     features: ['ألواح مقاومة للحريق والحرارة UV', 'تنوع هائل في الألوان والتشطيبات', 'سهولة الصيانة والتنظيف المباشر'],
     features_en: ['Fire and UV heat resistant panels', 'Huge variety of colors and finishes', 'Easy maintenance and direct cleaning']
   },
@@ -167,7 +167,7 @@ const SERVICES_DATA = [
     desc: 'حلول وتصاميم هندسية خاصة وفق مخططات الاستشاريين للمشاريع الفاخرة والفنادق والمقرات التجارية.',
     desc_en: 'Special engineering solutions per consultant drawings for luxury projects, hotels and commercial headquarters.',
     icon: Wrench,
-    image: '/image_copy_3.png',
+    image: '/صورة_الريان_3.png',
     features: ['تنفيذ دقيق حسب المواصفات الفنية', 'إنتاج بآلات CNC ألمانية متطورة', 'إشراف مهندسين متخصصين في الموقع'],
     features_en: ['Precise execution per technical specs', 'Advanced German CNC machine production', 'On-site specialist engineer supervision']
   }
@@ -182,7 +182,7 @@ const PROJECTS_DATA = [
     location: 'التجمع الخامس - القاهرة الجديدة',
     date: '2024',
     materials: 'قطاع ألومنيوم معزول + إكسسوارات بلوم نمساوي + رخام كالاكاتا',
-    image: '/image_copy.png',
+    image: '/صورة_الريان_1.png',
     details: 'تم تنفيذ المطبخ بألواح أكريليك سوداء غير لامعة مع قطاعات ألومنيوم خفية وإضاءة LED ذكية مدمجة بالرفوف.'
   },
   {
@@ -193,7 +193,7 @@ const PROJECTS_DATA = [
     location: 'الشيخ زايد - 6 أكتوبر',
     date: '2024',
     materials: 'إطار ألومنيوم برونزي + زجاج سيكوريت عاكس + إضاءة LED 3000K',
-    image: '/image_copy_2.png',
+    image: '/صورة_الريان_2.png',
     details: 'تصميم دريسنج روم مفتوح يدمج بين أنظمة الأدراج المقواة والرفوف الزجاجية المزودة بإضاءات استشعارية.'
   },
   {
@@ -204,7 +204,7 @@ const PROJECTS_DATA = [
     location: 'العاصمة الإدارية الجديدة',
     date: '2023',
     materials: 'Structural Glazing Double Glass 24mm + قطاعات ألومنيوم ثقيلة',
-    image: '/image_copy_3.png',
+    image: '/صورة_الريان_3.png',
     details: 'تركيب واجهة كرتن وول بمساحة 1200 متر مربع توفر عزلاً كاملاً للصوت والحرارة وتتحمل الرياح العالية.'
   },
   {
@@ -215,7 +215,7 @@ const PROJECTS_DATA = [
     location: 'الرحاب - القاهرة',
     date: '2024',
     materials: 'قطاع جامبو عازل + زجاج دوبل جورجيا أسود',
-    image: '/image_copy_7.png',
+    image: '/صورة_الريان_7.png',
     details: 'تنفيذ كافة فتحات الفيلا بقطاعات ألومنيوم عريضة تضمن أعلى معدلات الأمان والعزل مع سلك ناموس بلبيس مخفي.'
   },
   {
@@ -226,7 +226,7 @@ const PROJECTS_DATA = [
     location: 'القرية الذكية - 6 أكتوبر',
     date: '2023',
     materials: 'زجاج سيكوريت 12 مم + إكسسوارات ستانلس ستيل 316',
-    image: '/image_copy_6.png',
+    image: '/صورة_الريان_6.png',
     details: 'تقسيم المساحة المفتوحة للشركة إلى 14 مكتب وغرفة اجتماعات معزولة صوتياً بتصميم فريم لس مودرن.'
   },
   {
@@ -237,7 +237,7 @@ const PROJECTS_DATA = [
     location: 'الشروق - القاهرة',
     date: '2024',
     materials: 'دهانات إلكتروستاتيك خشبية + إكسسوارات هيدروليكية',
-    image: '/image_copy_3.png',
+    image: '/صورة_الريان_3.png',
     details: 'مطبخ يجمع بين دفء شكل الخشب الطبيعي ومزايا الألومنيوم المقاوم للماء والحشرات مع وحدات تخزين ذكية.'
   }
 ];
@@ -282,7 +282,7 @@ const TESTIMONIALS_DATA = [
     role: 'استشاري هندسي - مشروع فيلا التجمع',
     comment: 'التعامل مع شركة الريان كان تجربة استثنائية. دقة الالتزام بالمواعيد، جودة تركيب قطاعات الألوميتال، والاهتمام بأصغر التفاصيل في المطبخ والدريسنج جعلهم الخيار الأول لمشاريعنا.',
     rating: 5,
-    image: '/image_copy_3.png'
+    image: '/صورة_الريان_3.png'
   },
   {
     id: 2,
@@ -290,7 +290,7 @@ const TESTIMONIALS_DATA = [
     role: 'مالك شركة تسويق - العاصمة الإدارية',
     comment: 'نفذوا لنا واجهة المقر الرئيسي وقواطع الزجاج السيكوريت الداخلية. الاحترافية عالية جداً، ومهندسي الموقع على دراية كاملة بأدق التفاصيل المعمارية.',
     rating: 5,
-    image: '/image_copy.png'
+    image: '/صورة_الريان_1.png'
   },
   {
     id: 3,
@@ -298,7 +298,7 @@ const TESTIMONIALS_DATA = [
     role: 'مالكة فيلا بمدينة الشيخ زايد',
     comment: 'المطبخ والدريسنج روم طلعوا أجمل بكتير من التخيل! التصميم 3D المطابق للواقع، وتنسيق الألوان والإضاءات مخلي البيت تحفة فنية. شكراً لفريق الريان.',
     rating: 5,
-    image: '/image_copy_2.png'
+    image: '/صورة_الريان_2.png'
   }
 ];
 
@@ -426,6 +426,20 @@ export default function Home() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const message = `طلب معاينة من موقع الريان%0A` +
+      `الاسم: ${formData.name}%0A` +
+      `الهاتف / واتساب: ${formData.phone}%0A` +
+      `الخدمة المطلوبة: ${formData.service}%0A` +
+      `المدينة / المنطقة: ${formData.city}%0A` +
+      `تفاصيل إضافية: ${formData.notes || 'لا توجد تفاصيل إضافية'}%0A` +
+      `%0Aيرجى التواصل لتأكيد المعاينة ومواعيد القياسات.`;
+
+    const whatsappUrl = `https://wa.me/201102655589?text=${message}`;
+    if (typeof window !== 'undefined') {
+      window.open(whatsappUrl, '_blank');
+    }
+
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -464,7 +478,7 @@ export default function Home() {
           {/* Brand Logo */}
           <a href="#home" className="flex items-center gap-3 group">
             <div className="w-14 h-14 rounded-xl bg-white/5 p-1 shadow-lg group-hover:scale-105 transition-transform duration-300 flex items-center justify-center overflow-hidden">
-              <img src="/logo.jpg" alt="شعار الريان" className="w-full h-full object-contain" />
+              <img src="/شعار_الريان.jpg" alt="شعار الريان" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-black tracking-tight text-white leading-tight" style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}>
@@ -578,12 +592,12 @@ export default function Home() {
                   <span>اتصل بنا: 01102655589</span>
                 </a>
                 <a
-                  href="https://wa.me/201102655589"
+                  href="https://wa.me/201102655589?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%AD%D8%AC%D8%B2+%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9+%D8%A3%D9%88+%D8%B7%D9%84%D8%A8+%D9%85%D8%B4%D8%B1%D9%88%D8%B9+%D9%85%D9%85%D8%A7%D8%AB%D9%84."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl text-sm font-bold"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <FaWhatsapp className="w-4 h-4" />
                   <span>محادثة واتساب مباشرة</span>
                 </a>
               </div>
@@ -598,7 +612,7 @@ export default function Home() {
         {/* Background Video Player with Ambient Soft Blur & Shimmer */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
-            src="/banner.jpg"
+            src="/بانر_التواصل.jpg"
             alt="الريان للألوميتال"
             className="w-full h-full object-cover transform scale-105 filter brightness-[0.45] saturate-[1.2] blur-[2px] opacity-90 transition-transform duration-1000"
           />
@@ -715,7 +729,7 @@ export default function Home() {
 
                 {/* The Pop-out Transparent Image */}
                 <img
-                  src="/hero_person_transparent.png"
+                  src="/شخص_البطل_شفاف.png"
                   alt="ممثل مؤسسة الريان"
                   className="absolute bottom-2 z-10 w-auto h-[120%] max-w-[140%] object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-700 pointer-events-none"
                 />
@@ -780,10 +794,10 @@ export default function Home() {
             >
               <div
                 className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/10 cursor-pointer"
-                onClick={() => setZoomedImage('/image_copy_6.png')}
+                onClick={() => setZoomedImage('/رؤيتنا.png')}
               >
                 <img
-                  src="/image_copy.png"
+                  src="/رؤيتنا.png"
                   alt="Al Rayan Kitchen Showroom"
                   className="w-full h-[420px] object-cover group-hover/about:scale-110 transition-transform duration-700 filter brightness-95 group-hover/about:brightness-105"
                 />
@@ -1012,7 +1026,7 @@ export default function Home() {
               <div className="relative h-[400px] sm:h-[480px] rounded-3xl overflow-hidden shadow-2xl border border-white/20 select-none">
 
                 <img
-                  src="/image_copy_5.png"
+                  src="/صورة_الريان_5.png"
                   alt="النتيجة النهائية الفاخرة - تنفيذ شركة الريان للألوميتال"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -1025,7 +1039,7 @@ export default function Home() {
                   style={{ width: `${beforeAfterPos}%` }}
                 >
                   <img
-                    src="/image_copy_6.png"
+                    src="/صورة_الريان_6.png"
                     alt="الحالة الأصلية للموقع قبل بدء أعمال التشطيبات والتركيب"
                     className="absolute inset-0 w-full h-full object-cover max-w-none filter grayscale brightness-75"
                     style={{ width: '100%', height: '100%' }}
@@ -1179,9 +1193,9 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(200,155,60,0.15)] border border-white/10 group cursor-pointer" onClick={() => setZoomedImage('/person.png')}>
+              <div className="relative rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(200,155,60,0.15)] border border-white/10 group cursor-pointer" onClick={() => setZoomedImage('/صورة_الشخص.png')}>
                 <img
-                  src="/person.png"
+                  src="/صورة_الشخص.png"
                   alt="فريق عمل الريان والمهندسين"
                   className="w-full h-[400px] sm:h-[500px] object-cover filter brightness-90 group-hover:brightness-110 group-hover:scale-105 transition-all duration-700"
                 />
@@ -1210,15 +1224,15 @@ export default function Home() {
       <section id="projects" className="py-24 bg-[#091B44] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="flex flex-col items-center text-center mb-12 gap-6">
             <div>
-              <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'معرض الأعمال' : 'Projects Gallery'}</span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white font-serif">
+              <span className="text-[#C89B3C] text-xl sm:text-2xl font-bold tracking-widest uppercase block mb-3">{i18n.language === 'ar' ? 'معرض الأعمال' : 'Projects Gallery'}</span>
+              <h2 className="text-5xl sm:text-7xl font-black text-white font-serif leading-tight mx-auto">
                 {i18n.language === 'ar' ? 'مشاريع نفخر بتنفيذها' : 'Projects We Are Proud Of'}
               </h2>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {[
                 { id: 'all', label: 'الكل' },
                 { id: 'kitchens', label: 'مطابخ مودرن' },
@@ -1272,10 +1286,6 @@ export default function Home() {
                   </div>
 
                   <div className="p-6 flex flex-col gap-3">
-                    <div className="flex items-center gap-2 text-xs text-[#C89B3C]">
-                      <MapPin className="w-3.5 h-3.5" />
-                      <span>{project.location}</span>
-                    </div>
                     <h3
                       onClick={() => setSelectedProject(project)}
                       className="text-lg font-bold text-white group-hover:text-[#C89B3C] transition-colors cursor-pointer"
@@ -1336,7 +1346,7 @@ export default function Home() {
 
               <div className="pt-2">
                 <button
-                  onClick={() => setZoomedImage('/image_copy_7.png')}
+                  onClick={() => setZoomedImage('ROW.png')}
                   className="bg-[#0A3EA8] hover:bg-[#1955d1] text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-xl flex items-center gap-3 hover:scale-105 transition-all"
                 >
                   <ZoomIn className="w-5 h-5 text-[#C89B3C]" />
@@ -1348,10 +1358,10 @@ export default function Home() {
             <div className="lg:col-span-6">
               <div
                 className="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer"
-                onClick={() => setZoomedImage('/image_copy_7.png')}
+                onClick={() => setZoomedImage('ROW.png')}
               >
                 <img
-                  src="/image_copy_7.png"
+                  src="/ROW.png"
                   alt="أعمال الريان للألوميتال والمطابخ"
                   className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700 filter brightness-90 group-hover:brightness-105"
                 />
@@ -1432,7 +1442,7 @@ export default function Home() {
                         <ArrowDown className="w-6 h-6 text-[#C89B3C] animate-bounce" />
                       </div>
 
-                      <img src="/logo.jpg" alt="Al Rayan" className="w-40 h-40 lg:w-56 lg:h-56 object-cover rounded-full border-4 border-[#C89B3C] shadow-2xl relative z-10 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-12" />
+                      <img src="/شعار_الريان.jpg" alt="Al Rayan" className="w-40 h-40 lg:w-56 lg:h-56 object-cover rounded-full border-4 border-[#C89B3C] shadow-2xl relative z-10 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-12" />
 
                       <div className="absolute bottom-4 lg:bottom-[20%] text-[#C89B3C] font-bold text-lg lg:text-xl whitespace-nowrap opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         إبداعات الريان
@@ -1558,7 +1568,7 @@ export default function Home() {
           </h2>
 
           <p className="text-gray-200 text-base max-w-xl">
-            {i18n.language === 'ar' ? 'احصل على معاينة مجانية من مهندس متخصص واستلم تصميم 3D تفاعلي مجاناً دون أي التزام.' : 'Get a free inspection from a specialist engineer and receive a free interactive 3D design with no commitment.'}
+            {i18n.language === 'ar' ? 'مشوار مشروعك معنا يبدأ بخطوة واحدة: تواصل الآن لتحصل على معاينة مجانية وخطة تنفيذ واضحة من أول يوم.' : 'Your project journey starts with one step: contact us now for a free inspection and a clear execution plan from day one.'}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
@@ -1574,7 +1584,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20b858] text-white px-8 py-4 rounded-xl font-bold text-base shadow-2xl transition-all flex items-center justify-center gap-2 hover:scale-105"
             >
-              <MessageCircle className="w-5 h-5" />
+              <FaWhatsapp className="w-5 h-5" />
               <span>{i18n.language === 'ar' ? 'تواصل واتساب مباشرة' : 'Chat on WhatsApp'}</span>
             </a>
           </div>
@@ -1593,42 +1603,52 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#C89B3C] text-sm font-bold tracking-widest uppercase block mb-2">{i18n.language === 'ar' ? 'كيف نعمل؟' : 'How Do We Work?'}</span>
             <h2 className="text-3xl sm:text-5xl font-black text-white font-serif mb-4">
-              {i18n.language === 'ar' ? 'خطوات تنفيذ مشروعك' : 'Steps to Execute Your Project'}
+              {i18n.language === 'ar' ? 'خطوات تنفيذ مشروعك بخطوات واضحة' : 'Your Project Delivered in Clear Steps'}
             </h2>
             <p className="text-gray-300 text-base">
-              {i18n.language === 'ar' ? 'رحلة سلسة واحترافية من أول اتصال حتى الاستلام النهائي لضمان أعلى مستويات الجودة والرضا.' : 'A smooth and professional journey from first contact to final handover to ensure the highest quality and satisfaction.'}
+              {i18n.language === 'ar' ? 'نحول فكرتك إلى تنفيذ متكامل بخطوات سهلة وواضحة، من المعاينة الأولى حتى التسليم والمتابعة.' : 'We turn your idea into a complete delivery with clear steps, from the first inspection to handover and follow-up.'}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 relative">
-            {/* Connecting Line for Desktop */}
-            <div className="hidden lg:block absolute top-12 left-12 right-12 h-1 bg-gradient-to-r from-transparent via-[#C89B3C]/30 to-transparent -z-10" />
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3 relative">
+            <div className="hidden lg:block absolute inset-x-10 top-1/2 h-px bg-gradient-to-r from-transparent via-[#C89B3C]/30 to-transparent -z-10" />
 
             {[
-              { id: 1, title_ar: 'الاستشارة', title_en: 'Consultation', icon: <PhoneCall className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 2, title_ar: 'المعاينة', title_en: 'Inspection', icon: <Ruler className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 3, title_ar: 'تصميم 3D', title_en: '3D Design', icon: <Monitor className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 4, title_ar: 'التصنيع', title_en: 'Manufacturing', icon: <Cog className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 5, title_ar: 'التركيب', title_en: 'Installation', icon: <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
-              { id: 6, title_ar: 'دعم ما بعد البيع', title_en: 'After-Sales Support', icon: <HeartHandshake className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:text-[#C89B3C] transition-colors" /> },
+              { id: 1, title_ar: 'الاستشارة', title_en: 'Consultation', desc_ar: 'نستمع لرؤيتك ونحدّد الحل الأنسب لمساحتك وأسلوبك.', desc_en: 'We listen to your vision and define the best solution for your space and style.', icon: <PhoneCall className="w-8 h-8 sm:w-10 sm:h-10 text-[#C89B3C]" /> },
+              { id: 2, title_ar: 'المعاينة', title_en: 'Inspection', desc_ar: 'زيارة الموقع لقياس المساحات بدقة وتوثيق التفاصيل الميدانية.', desc_en: 'On-site visit to measure spaces accurately and document every detail.', icon: <Ruler className="w-8 h-8 sm:w-10 sm:h-10 text-[#C89B3C]" /> },
+              { id: 3, title_ar: 'تصميم 3D', title_en: '3D Design', desc_ar: 'نرسم التصميم ثلاثي الأبعاد لتشوف مشروعك قبل تنفيذه بالكامل.', desc_en: 'We render a 3D design so you can see your project before it is fully built.', icon: <Monitor className="w-8 h-8 sm:w-10 sm:h-10 text-[#C89B3C]" /> },
+              { id: 4, title_ar: 'التصنيع', title_en: 'Manufacturing', desc_ar: 'تصنيع مخصص في المصنع بأعلى معايير الجودة والتشطيب.', desc_en: 'Custom manufacturing in our facility with the highest quality and finishes.', icon: <Cog className="w-8 h-8 sm:w-10 sm:h-10 text-[#C89B3C]" /> },
+              { id: 5, title_ar: 'التركيب', title_en: 'Installation', desc_ar: 'تركيب محترف بسرعة وبدقة لتسليم المشروع في الوقت المحدد.', desc_en: 'Professional installation done quickly and precisely for on-time delivery.', icon: <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-[#C89B3C]" /> },
+              { id: 6, title_ar: 'دعم ما بعد البيع', title_en: 'After-Sales Support', desc_ar: 'متابعة مستمرة وضمان يضمن راحتك بعد التسليم.', desc_en: 'Continuous follow-up and warranty that ensures your comfort after handover.', icon: <HeartHandshake className="w-8 h-8 sm:w-10 sm:h-10 text-[#C89B3C]" /> },
             ].map((step, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="flex flex-col items-center text-center group"
+                transition={{ duration: 0.55, delay: idx * 0.08 }}
+                className="group rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-[0_28px_90px_-50px_rgba(0,0,0,0.6)] backdrop-blur-2xl hover:-translate-y-2 hover:border-[#C89B3C]/40 hover:bg-white/10 transition-all duration-500"
               >
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#091B44] border-4 border-[#0A3EA8]/50 group-hover:border-[#C89B3C] shadow-2xl flex items-center justify-center text-3xl sm:text-4xl mb-4 transition-all duration-500 group-hover:scale-110 relative">
-                  {step.icon}
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#C89B3C] text-white text-sm font-bold flex items-center justify-center border-2 border-[#05102a]">
-                    {step.id}
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <div className="flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-[#0A3EA8] to-[#091B44] shadow-xl border border-white/10">
+                    {step.icon}
                   </div>
+                  <div className="text-sm font-bold tracking-widest text-[#C89B3C] bg-white/10 px-3 py-2 rounded-full border border-white/10">{step.id}</div>
                 </div>
-                <h4 className="text-lg font-bold text-white group-hover:text-[#C89B3C] transition-colors">{i18n.language === 'ar' ? (step as any).title_ar : (step as any).title_en}</h4>
+                <h4 className="text-2xl font-black text-white mb-3 transition-colors group-hover:text-[#C89B3C]">{i18n.language === 'ar' ? (step as any).title_ar : (step as any).title_en}</h4>
+                <p className="text-sm leading-relaxed text-gray-300">{i18n.language === 'ar' ? (step as any).desc_ar : (step as any).desc_en}</p>
+                <div className="mt-6 inline-flex items-center gap-2 text-[#C89B3C] font-semibold text-sm">
+                  <span>{i18n.language === 'ar' ? 'سهل' : 'Smooth'}</span>
+                  <span className="h-1 w-8 rounded-full bg-[#C89B3C]/60" />
+                  <span>{i18n.language === 'ar' ? 'واضح' : 'Clear'}</span>
+                </div>
               </motion.div>
             ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <a href="https://wa.me/201102655589" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 rounded-full bg-[#C89B3C] px-8 py-4 text-sm font-extrabold uppercase tracking-[0.2em] text-white shadow-[0_24px_80px_-40px_rgba(200,155,60,0.9)] hover:bg-[#e08c41] transition-all duration-300">
+              {i18n.language === 'ar' ? 'ابدأ مشروعك الآن' : 'Start Your Project Now'}
+            </a>
           </div>
         </motion.div>
       </section>
@@ -1684,7 +1704,7 @@ export default function Home() {
                   className="bg-[#08173b] p-5 rounded-2xl border border-white/10 hover:border-[#25D366] transition-colors flex items-center gap-4 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#25D366]/20 text-[#25D366] flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <MessageCircle className="w-6 h-6" />
+                    <FaWhatsapp className="w-6 h-6" />
                   </div>
                   <div>
                     <span className="text-xs text-gray-400 block">{i18n.language === 'ar' ? 'واتساب 24/7' : 'WhatsApp 24/7'}</span>
@@ -1764,12 +1784,12 @@ export default function Home() {
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         className="w-full bg-[#091B44] border border-white/10 rounded-xl p-3.5 text-white focus:outline-none focus:border-[#C89B3C] text-sm"
                       >
-                        <option value="مطابخ مودرن">مطابخ مودرن وفخمة</option>
-                        <option value="دريسنج روم">غرف دريسنج روم</option>
+                        <option value="مطابخ مودرن وفخمة">مطابخ مودرن وفخمة</option>
+                        <option value="غرف دريسنج روم">غرف دريسنج روم</option>
                         <option value="شبابيك وأبواب ألوميتال">شبابيك وأبواب ألوميتال</option>
                         <option value="واجهات كرتن وول وسيكوريت">واجهات كرتن وول وسيكوريت</option>
-                        <option value="قواطع مكاتب">قواطع مكاتب زجاجية</option>
-                        <option value="تجليد كلادينج">تجليد واجهات كلادينج</option>
+                        <option value="قواطع مكاتب زجاجية">قواطع مكاتب زجاجية</option>
+                        <option value="تجليد واجهات كلادينج">تجليد واجهات كلادينج</option>
                       </select>
                     </div>
 
@@ -1786,10 +1806,10 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-gray-300 mb-2">ملاحظات أو تفاصيل إضافية</label>
+                    <label className="block text-xs font-semibold text-gray-300 mb-2">تفاصيل المشروع</label>
                     <textarea
                       rows={4}
-                      placeholder="أدخل أي تفاصيل تود توضيحها للمهندس..."
+                      placeholder="اكتب تفاصيل المشروع أو الملاحظات التي تريد إضافتها"
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       className="w-full bg-[#091B44] border border-white/10 rounded-xl p-3.5 text-white focus:outline-none focus:border-[#C89B3C] text-sm"
@@ -1814,7 +1834,7 @@ export default function Home() {
 
       {/* Contact Banner Image */}
       <section className="w-full bg-[#05102a] border-t border-white/10">
-        <img src="/banner.jpg" alt="تواصل معنا - الريان" className="w-full h-auto max-h-[400px] object-cover" />
+        <img src="/بانر_التواصل.jpg" alt="تواصل معنا - الريان" className="w-full h-auto max-h-[400px] object-cover" />
       </section>
 
       {/* Footer */}
@@ -1825,7 +1845,7 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-14 h-14 rounded-xl bg-white/5 p-1 flex items-center justify-center overflow-hidden">
-                  <img src="/logo.jpg" alt="شعار الريان" className="w-full h-full object-contain" />
+                  <img src="/شعار_الريان.jpg" alt="شعار الريان" className="w-full h-full object-contain" />
                 </div>
                 <span className="text-xl font-bold text-white" style={{ fontFamily: "'Tharwat Emara Ruqaa', 'Cairo', serif" }}>الريان</span>
               </div>
@@ -1859,19 +1879,19 @@ export default function Home() {
               <h4 className="text-white font-bold text-sm mb-4">{i18n.language === 'ar' ? 'أرقام التواصل والتواجد' : 'Contact Numbers'}</h4>
               <div className="space-y-3 text-xs">
                 <a href="https://wa.me/201102655589" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#C89B3C] transition-colors">
-                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                  <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
                   <span dir="ltr" className="font-mono text-white text-sm font-bold">01102655589</span>
                 </a>
                 <a href="https://wa.me/201030043236" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#C89B3C] transition-colors">
-                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                  <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
                   <span dir="ltr" className="font-mono text-white text-sm font-bold">+20 10 30043236</span>
                 </a>
                 <div className="flex gap-4 pt-4">
                   <a href="https://www.facebook.com/Alrayan.alometal" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:scale-110 transition-all shadow-lg shadow-[#1877F2]/30">
                     <Facebook className="w-5 h-5 fill-current" />
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white hover:scale-110 transition-all shadow-lg shadow-[#dc2743]/30">
-                    <Instagram className="w-5 h-5" />
+                  <a href="https://www.tiktok.com/@elrayan1001?_r=1&_t=ZS-98ZrkMF4kkL" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white hover:scale-110 transition-all shadow-lg shadow-black/30">
+                    <FaTiktok className="w-5 h-5" />
                   </a>
                   <a href="https://wa.me/201102655589" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:scale-110 transition-all shadow-lg shadow-[#25D366]/30">
                     <Phone className="w-5 h-5 fill-current" />
@@ -1896,7 +1916,7 @@ export default function Home() {
         className="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center border-2 border-white"
         aria-label="WhatsApp"
       >
-        <MessageCircle className="w-7 h-7" />
+        <FaWhatsapp className="w-7 h-7" size={28} />
         <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping" />
       </a>
 
@@ -2070,5 +2090,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 
