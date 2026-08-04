@@ -36,7 +36,7 @@ export default function Splash({ onComplete }: { onComplete: () => void }) {
         >
           <div className="w-32 h-32 rounded-3xl p-1 shadow-2xl shadow-[#C89B3C]/30 flex items-center justify-center bg-white/5 overflow-hidden">
             <motion.img
-              src="/logo.jpg"
+              src="/شعار_الريان.jpg"
               alt="شعار الريان"
               initial={{ rotateY: 90 }}
               animate={{ rotateY: 0 }}
